@@ -73,3 +73,18 @@ void cls() {
     system("pause");
     system("cls");
 }
+
+// Funkcija za siguran unos brojeva
+template <typename T>
+void number_cin(T& x, const string& message) {
+    cout << message;
+    cin >> x;
+    while(cin.fail()) {
+        cout << "Error: nije unesen broj.\n";
+        cin.clear();
+        cin.ignore(256, '\n');
+        cout << message;
+        cin >> x;
+    }
+    cin.ignore();
+}

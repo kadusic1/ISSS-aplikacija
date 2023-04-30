@@ -12,7 +12,7 @@ const string MENUFILE = "functions/textfiles/showmenu.txt";
 
 // Funkcija za ispis osnovnih podataka o ulogovanom korisniku, a zatim ispis menija
 // i izbor opcija
-void menu(const vector<string>& rowData) {
+int menu(const vector<string>& rowData) {
     // Ispis imena i prezimena ulogovanog korisnika
     cout << "Ime i prezime korisnika: " << rowData[PERSON_NAME_INDEX]
     << " " << rowData[PERSON_SURNAME_INDEX] << "\n";
@@ -39,8 +39,10 @@ void menu(const vector<string>& rowData) {
     // Unosimo sve dok ne unesemo vrijednosti od 1 do 6 ili od 1 do 7
     int unos;
     do {
-        cout << "Vas unos: ";
-        cin >> unos;
+        // Sigurni unos broja pomocu funkcije number_cin()
+        number_cin(unos, "Vas unos: ");
         if(unos < 1 || unos > upperLimit) cout << "[GREKSA] Neispravan unos\n";
     } while(unos < 1 || unos > upperLimit);
+    // Vracamo odabranu vrijednost
+    return unos;
 }

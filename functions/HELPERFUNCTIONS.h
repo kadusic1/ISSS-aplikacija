@@ -1,5 +1,6 @@
 using namespace std;
 
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -18,4 +19,8 @@ void line();
 
 // Funkcija koja pauzira, a zatim i birse konzolu
 void cls();
+
+// Funkcija za siguran unos brojeva
+template <typename T>
+void number_cin(T& x, const string& message);
 
