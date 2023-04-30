@@ -1,4 +1,4 @@
-Login stranica
+Stranica login
 -----------------------------------------------------
 Politehnicki fakultet
 Fakultetska 1

@@ -1,0 +1,9 @@
+Stranica menu
+------------------------------------------------------
+Izbor stranice:
+    1 - Moje informacije
+    2 - Oglasna ploca
+    3 - Studij
+    4 - Ispiti
+    5 - Licno
+    6 - Log off
