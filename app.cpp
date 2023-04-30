@@ -25,10 +25,11 @@ int main() {
     } while(loginData.empty());
     // Kada login uspije idemo na menu i brisemo ekran
     cout << "Uspjesan login!\n";
-    cls();
+
+    // Dok petlja radi stranica je pokrenuta tj. u up stanju
+    while(true) {
     // Pohranjujemo odabir stranice
     pageChoice = menu(loginData);
-
     // Redirekcija na odgovarajucu stranu pomocu switch case
     switch(pageChoice) {
         case 1:
@@ -44,10 +45,37 @@ int main() {
         case 6:
             break;
         case 7:
+            // Napustamo petlju preko labeli i zavrsavamo program
+            goto END;
             break;
-        default:
+        case 8:
+            // Odabir koju funkciju zelimo pozvati
+            int functionChoice = root_menu();
+            switch(functionChoice) {
+                case 1:
+                    cout << "Izbor 1\n";
+                    break;
+                case 2:
+                    cout << "Izbor 2\n";
+                    break;
+                case 3:
+                    cout << "Izbor 3\n";
+                    break;
+                case 4:
+                    cout << "Izbor 4\n";
+                    break;
+                case 5:
+                    cout << "Izbor 5\n";
+                    break;
+            }
             break;
     }
+    }
     
+    // Ispisujemo zadnju poruku prije zavrsetka
+    END:
+    cls();
+    cout << "Zelimo vam ugodan dan.\n";
+
     return 0;
 }

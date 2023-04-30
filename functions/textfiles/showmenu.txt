@@ -7,3 +7,4 @@ Izbor stranice:
     4 - Ispiti
     5 - Licno
     6 - Log off
+    7 - Zavrsi program

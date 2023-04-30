@@ -1,3 +1,6 @@
+#ifndef HELPERFUNCTIONS_H
+#define HELPERFUNCTIONS_H
+
 using namespace std;
 
 #include <iostream>
@@ -24,3 +27,4 @@ void cls();
 template <typename T>
 void number_cin(T& x, const string& message);
 
+#endif
