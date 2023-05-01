@@ -93,3 +93,13 @@ void number_cin(T& x, const string& message) {
     }
     cin.ignore();
 }
+
+// Funkcija koja formatira vektor stringova i vraca format pogodan za upis jednog
+// reda u bazu podataka;
+string format_for_database(const vector<string>& data) {
+    string line = "";
+    for(auto a : data) {
+        line+=a+"+";
+    }
+    return line;
+}

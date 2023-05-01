@@ -30,4 +30,8 @@ void cls();
 template <typename T>
 void number_cin(T& x, const string& message);
 
+// Funkcija koja formatira vektor stringova i vraca format pogodan za upis jednog
+// reda u bazu podataka;
+string format_for_database(const vector<string>& data);
+
 #endif

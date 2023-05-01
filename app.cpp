@@ -5,6 +5,7 @@
 #include "functions/loginPage.cpp"
 #include "functions/helper.cpp"
 #include "functions/menu.cpp"
+#include "functions/rootfunctions.cpp"
 
 using namespace std;
 
@@ -53,7 +54,7 @@ int main() {
             int functionChoice = root_menu();
             switch(functionChoice) {
                 case 1:
-                    cout << "Izbor 1\n";
+                    edit_college_info();
                     break;
                 case 2:
                     cout << "Izbor 2\n";
