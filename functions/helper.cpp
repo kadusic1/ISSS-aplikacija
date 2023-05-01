@@ -103,3 +103,27 @@ string format_for_database(const vector<string>& data) {
     }
     return line;
 }
+
+// Funkcija koja vraca (u vektor obliku) zadnji red iz tabele baze podataka
+vector<string> last_line(ifstream& input, int column_count) {
+    // Vektor koji ce sadrzavati red
+    vector<string> helper;
+    // Provjera da li je stream otvoren
+    if(input.is_open()) {
+        // Ukoliko se fajl otvorio inicijalziramo pomocnu varijablu dummy
+        string dummy;
+        // Varijabla o broju linija
+        int lineCount = line_count(input);
+        // Preskacemo sve redove osim zanjeg sa for petljom
+        for(int i = 0; i < lineCount-1; i++) {
+            getline(input, dummy);
+        }
+        // Ucitavamo zadnji red
+        helper = load_row(input, column_count);
+        // Zatvaramo stream
+        input.close();
+    } else {
+        error();
+    }
+    return helper;
+}

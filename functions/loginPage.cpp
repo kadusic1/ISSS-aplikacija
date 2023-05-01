@@ -8,8 +8,6 @@
 
 using namespace std;
 
-
-
 // Funkcija koja prikazuje osnovne podatke za login stranu
 void show_login() {
     show(LOGINFILE);

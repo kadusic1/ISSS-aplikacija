@@ -57,7 +57,7 @@ int main() {
                     edit_college_info();
                     break;
                 case 2:
-                    cout << "Izbor 2\n";
+                    add_department();
                     break;
                 case 3:
                     cout << "Izbor 3\n";

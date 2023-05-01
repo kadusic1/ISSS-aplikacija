@@ -34,4 +34,7 @@ void number_cin(T& x, const string& message);
 // reda u bazu podataka;
 string format_for_database(const vector<string>& data);
 
+// Funkcija koja vraca (u vektor obliku) zadnji red iz tabele baze podataka
+vector<string> last_line(ifstream& input, int column_count);
+
 #endif
