@@ -1,5 +1,4 @@
-Softversko inzenjerstvo+3+1+
-Proizvodni Biznis+3+2+
-Masinstvo++3+
-Pravo+4+4+
-Arhitektura++5+
+Pravo+3+1+
+Politehnika+4+2+
+Gradjevinarstvo++3+
+Metalurgija+5+4+

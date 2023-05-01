@@ -37,4 +37,7 @@ string format_for_database(const vector<string>& data);
 // Funkcija koja vraca (u vektor obliku) zadnji red iz tabele baze podataka
 vector<string> last_line(ifstream& input, int column_count);
 
+// Funkcija koja automatski određuje vrijednost sljedeceg indexa za tabelu
+int next_index(string NAME, int column_count, int index_position);
+
 #endif

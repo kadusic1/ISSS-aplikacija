@@ -127,3 +127,24 @@ vector<string> last_line(ifstream& input, int column_count) {
     }
     return helper;
 }
+
+// Funkcija koja automatski određuje vrijednost sljedeceg indexa za tabelu
+int next_index(string NAME, int column_count, int index_position) {
+    ifstream input(NAME);
+    // Ukoliko se fajl ne otvori ispravno ispisujemo gresku i vracamo -1
+    if(!input.is_open()) {
+        error();
+        return -1;
+    }
+    // Ako je dokument prazan postavljamo indeks na 1 i vracamo ga
+    if(line_count(input) == 0) {
+        return 1;
+    } else {
+        // Citamo zadnju liniju iz dokumenta
+        vector<string> row = last_line(input, column_count);
+        // Zatvaramo stream
+        input.close();
+        // Povecavamo zadnji indeks za 1 i vracamo ga
+        return stoi(row[index_position])+1;
+    }
+}

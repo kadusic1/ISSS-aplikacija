@@ -72,25 +72,12 @@ void add_department() {
     cout << "Unesite trajanje studiranja: ";
     getline(cin, help);
     data.push_back(help); 
-
-    // Inicijaliziramo filestream radi provjere da li je dokument prazan ili zadnjeg
-    // indeksa
-    ifstream input(DEPARTMENTDATA);
-
-    // Ako je dokument prazan postavljamo indeks na 1
-    if(line_count(input) == 0) {
-        index = 1;
-        data.push_back(to_string(index));
-    } else {
-        // Citamo zadnju liniju iz dokumenta
-        vector<string> row = last_line(input, DEPARTMENT_COLUMNS);
-        // Povecavamo zadnji indeks za 1 i upisujemo ga u red
-        index = stoi(row[DEPARTMENT_INDEX_INDEX])+1;
-        data.push_back(to_string(index));
-    }
-    // Zatvaramo input stream
-    input.close();
-    
+    // Automatski postavljamo vrijednost indeksa koristeci funkciju next_index
+    index = next_index(DEPARTMENTDATA, DEPARTMENT_COLUMNS, DEPARTMENT_INDEX_INDEX);
+    // Ukoliko je vrijednost -1 doslo je do greske pa izlazimo iz funkcije
+    if(index==-1) return;
+    // Postavljamo index u vektor
+    data.push_back(to_string(index));
     // Iz vektora data dobijamo string pogodan za upis jednog reda u bazu podataka
     string row = format_for_database(data);
     // Otvaramo stream za upis podataka u append nacinu rada
