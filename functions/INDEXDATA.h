@@ -4,6 +4,16 @@
 
 #include <string>
 using namespace std;
+
+// String varijable
+// Varijable lokacija fajlova za ispis logina i podacima o osobi
+const string LOGINFILE = "functions/textfiles/showlogin.txt"; // Lokacija fajla sa tekstom za login
+// stranicu
+const string PERSONDATA = "database/Osobe.txt"; // lokacija tabele u bazi podataka za
+// osobe
+const string COLLEGEDATA = "database/Fakultet.txt"; // lokacija tabele sa informacijama
+// o fakultetu
+
 // Varijable koje opisiju tabelu Osobe.txt
 const int PERSON_NAME_INDEX = 0;
 const int PERSON_SURNAME_INDEX = 1;
@@ -29,6 +39,15 @@ const int PERSON_COLUMNS = 19; // Broj kolona u tabeli Osobe.txt
 const string ROOT_TYPE = "0";
 const string PROFESSOR_TYPE = "1";
 const string STUDENT_TYPE = "2";
+
+// Varijable koje opisuju tabelu Fakulteti.txt
+const int COLLEGE_NAME_INDEX = 0;
+const int COLLEGE_ADDRESS_INDEX = 1;
+const int COLLEGE_CITY_INDEX = 2;
+const int COLLEGE_POST_NUMBER_INDEX = 3;
+const int COLLEGE_COUNTRY_INDEX = 4;
+const int COLLEGE_WEBSITE_INDEX = 5;
+const int COLLEGE_COLUMNS = 6;
 
 // Kraj provjere
 #endif

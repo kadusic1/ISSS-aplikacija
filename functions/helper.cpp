@@ -5,8 +5,13 @@
 
 using namespace std;
 
+// Funkcija koja ispisuje poruku o gresci pri otvaranju datoteke
+void error() {
+    cout << "Error: greska u otvaranju datoteke.\n";
+}
+
 // Funkcija koja ucitava red odredjene tabele i vraca vrijedonsti kolona tog reda 
-vector<string> load_person(ifstream& input, int columnt_count) {
+vector<string> load_row(ifstream& input, int columnt_count) {
     // Pomocni string koji ce nam omoguciti inicijalizaciju vektora
     string helper;
     // Vektor pomocu kojeg izdvajamo vrijednosti kolona zasebno
@@ -57,7 +62,7 @@ void show(const string& NAME) {
     } 
     else {
         // Else statement ukoliko se dokument nije ispravo otvorio
-        cout << "Error: greska u otvaranju datoteke.\n";
+        error();
     }
     // Zatvaranje dokumenta
     input.close();

@@ -8,15 +8,26 @@
 
 using namespace std;
 
-// Varijable lokacija fajlova za ispis logina i podacima o osobi
-const string LOGINFILE = "functions/textfiles/showlogin.txt"; // Lokacija fajla sa tekstom za login
-// stranicu
-const string PERSONDATA = "database/Osobe.txt"; // lokacija tabele u bazi podataka za
-// osobe
+
 
 // Funkcija koja prikazuje osnovne podatke za login stranu
 void show_login() {
     show(LOGINFILE);
+    ifstream input(COLLEGEDATA);
+    if(input.is_open()) {
+        vector<string> data = load_row(input, COLLEGE_COLUMNS);
+        for(int i = 0; i < COLLEGE_COLUMNS; i++) {
+            if(i == COLLEGE_POST_NUMBER_INDEX-1) {
+                cout << data[i] << " ";
+            } else {
+                cout << data[i] << "\n";
+            }
+        }
+        line();
+        input.close();
+    } else {
+        error();
+    }
 }
 
 // Funkcija za pokusaj logovanja ukoliko uspije vraca red tabele Osobe.txt, ukoliko ne
@@ -47,7 +58,7 @@ vector<string> try_login() {
             getline(input,dummy);
         }
         // Inicijaliziramo vektor sa sadržajima reda i odgovarajućim brojem kolona
-        helper = load_person(input, PERSON_COLUMNS);
+        helper = load_row(input, PERSON_COLUMNS);
         // Poredimo da li je kolona 3 jednaka emailu i kolona 7 jednako passwordu
         // Ukoliko jest vracamo potake o ulgovanoj osobi
         if(helper[PERSON_EMAIL_INDEX] == email && helper[PERSON_PASSWORD_INDEX] == password) {

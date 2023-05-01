@@ -7,9 +7,12 @@ using namespace std;
 #include <string>
 #include <vector>
 
+// Funkcija koja ispisuje poruku o gresci pri otvaranju datoteke
+void error();
+
 // Funkcija koja ucitava vrijednosti jednog reda iz filestreama input sa column_count
 // kolona
-vector<string> load_person(ifstream& input, int column_count);
+vector<string> load_row(ifstream& input, int column_count);
 
 // Funkcija koja vraca broj linija file streama input
 int line_count(ifstream& input);
