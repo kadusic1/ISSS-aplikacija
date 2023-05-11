@@ -40,4 +40,14 @@ vector<string> last_line(ifstream& input, int column_count);
 // Funkcija koja automatski određuje vrijednost sljedeceg indexa za tabelu
 int next_index(string NAME, int column_count, int index_position);
 
+// Funkcija koja kopira source u destination
+void copyFile(const string& source, const string& destination);
+
+// Funkcija koja brise odredjeni red iz tabele baze podataka
+void deleteRow(const string& NAME, int rowNumber);
+
+// Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
+// indeksom i nudi odabir odredjenog indeksa
+int show_index(const string& NAME, int column_count, int name_index, int index_index);
+
 #endif

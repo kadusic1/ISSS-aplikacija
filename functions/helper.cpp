@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -10,18 +11,22 @@ void error() {
     cout << "Error: greska u otvaranju datoteke.\n";
 }
 
-// Funkcija koja ucitava red odredjene tabele i vraca vrijedonsti kolona tog reda 
+// Funkcija koja učitava red određene tabele i vraća vrijednosti kolona tog reda 
 vector<string> load_row(ifstream& input, int columnt_count) {
-    // Pomocni string koji ce nam omoguciti inicijalizaciju vektora
-    string helper;
-    // Vektor pomocu kojeg izdvajamo vrijednosti kolona zasebno
+    // Učitavanje cijelog reda iz datoteke u string varijablu
+    string line;
+    getline(input, line);
+    // Kreiranje stringstream objekta koji će nam omogućiti čitanje pojedinačnih kolona iz reda
+    stringstream ss(line);
+    // Vektor koji sadrži vrijednosti pojedinačnih kolona iz reda
     vector<string> help;
-    // Izdvajamo svako vrijednost kolone i postavljamo je u vektor
+    // Učitavanje vrijednosti svake kolone iz stringstreama i dodavanje u vektor
+    string column;
     for(int i = 0; i < columnt_count; i++) {
-        getline(input, helper, '+');
-        help.push_back(helper);
+        getline(ss, column, '+');
+        help.push_back(column);
     }
-    // Vracamo vrijednost vektora
+    // Vraćanje vektora sa vrijednostima kolona
     return help;
 }
 
@@ -147,4 +152,68 @@ int next_index(string NAME, int column_count, int index_position) {
         // Povecavamo zadnji indeks za 1 i vracamo ga
         return stoi(row[index_position])+1;
     }
+}
+
+// Funkcija koja kopira source u destination
+void copyFile(const string& source, const string& destination) {
+  ifstream input(source);
+  ofstream output(destination);
+  output << input.rdbuf();
+  input.close();
+  output.close();
+}
+
+
+// Funkcija koja brise odredjeni red iz tabele baze podataka
+void deleteRow(const string& NAME, int rowNumber) {
+    const string PATH = "functions/textfiles/";
+    // Stream za citanje podataka iz originalnog fajla
+    ifstream input(NAME);
+    // String za odredjivanje temporary fajla temp.txt
+    string help = PATH+"temp.txt";
+    // String za upis podataka u temporary file
+    ofstream tempFile(help);
+    // Brojac trenutnog reda
+    int currentRow = 1;
+    // Pomocna varijabla u koju cemo upisivati redove
+    string row;
+    // Petlja se ponavlja do kraja fajla
+    while (getline(input, row)) {
+        // Jedino se preskace linija za brisanje
+        if (currentRow != rowNumber) {
+            // Upisujemo red u temp dokument
+            tempFile << row << endl;
+        }
+        // Uvecavamo vrijednost trenutnog reda
+        currentRow++;
+    }
+    // Zatvaramo oba fajla
+    input.close();
+    tempFile.close();
+    // Kopiramo uredjene podatke (sa izbrisanim redom) u originalni fajl
+    copyFile(help, NAME);
+}
+
+// Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
+// indeksom i nudi odabir odredjenog indeksa
+int show_index(const string& NAME, int column_count, int name_index, int index_index) {
+    // Deklaracija input file streama asociranog sa datotekom NAME
+    ifstream input(NAME);
+    // Provjera da li je stream dobro otvoren ako nije ispisujemo gresku
+    if(input.fail()) {
+        error();
+        return -1;
+    }
+    // Ucitavamo vrijednosti redova u vektor help i ispisujemo naziv i indeks za svaki red
+    vector<string> help;
+    while(!input.eof()) {
+        help=load_row(input, column_count);
+        if(help[name_index].empty()) break;
+        cout << help[name_index] << " - " << help[index_index] << "\n";
+    }
+    // Deklaracija varijable koju cemo vratiti
+    int x;
+    // Sigurni unos broja
+    number_cin(x, "Vas odabir: ");
+    return x;
 }

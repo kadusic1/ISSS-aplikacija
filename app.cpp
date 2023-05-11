@@ -60,13 +60,25 @@ int main() {
                     add_department();
                     break;
                 case 3:
-                    cout << "Izbor 3\n";
+                    remove_department();
                     break;
                 case 4:
                     cout << "Izbor 4\n";
                     break;
                 case 5:
                     cout << "Izbor 5\n";
+                    break;
+                case 6:
+                    cout << "Izbor 6\n";
+                    break;
+                case 7:
+                    cout << "Izbor 7\n";
+                    break;
+                case 8:
+                    cout << "Izbor 8\n";
+                    break;
+                case 9:
+                    cout << "Izbor 9\n";
                     break;
             }
             break;

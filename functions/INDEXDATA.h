@@ -6,6 +6,8 @@
 using namespace std;
 
 // String varijable
+// Varijabla lokacije direktorija sa text file-ovima
+const string TEXTFILESPATH = "functions/textfiles/";
 // Varijable lokacija fajlova za ispis logina i podacima o osobi
 const string LOGINFILE = "functions/textfiles/showlogin.txt"; // Lokacija fajla sa tekstom za login
 // stranicu

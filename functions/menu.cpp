@@ -57,7 +57,7 @@ int root_menu() {
     // Ispisi datoteku showrootfile.txt
     show(ROOTMENUFILE);
     // Gornja granica je 5 jer imamo pet opcija
-    int upperLimit = 5;
+    int upperLimit = 9;
     // Variabjla u koju smjestamo izbor
     int unos;
     // Unosimo sve dok ne unesemo vrijednost od 1 do 5

@@ -3,7 +3,11 @@ Izbor root fukcija
 Izbor funkcije:
     1 - Uredi podatke o fakultetu
     2 - Dodaj odsjek
-    3 - Dodaj semestar
-    4 - Dodaj predmet
-    5 - Dodaj osobu
+    3 - Ukloni odsjek
+    4 - Dodaj semestar
+    5 - Ukloni semestar
+    6 - Dodaj predmet
+    7 - Ukloni predmet
+    8 - Dodaj osobu
+    9 - Ukloni osobu
 ------------------------------------------------------
