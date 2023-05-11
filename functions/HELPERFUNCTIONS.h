@@ -48,6 +48,6 @@ void deleteRow(const string& NAME, int rowNumber);
 
 // Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
 // indeksom i nudi odabir odredjenog indeksa
-int show_index(const string& NAME, int column_count, int name_index, int index_index);
+int show_index(const string& NAME, int column_count, int name_index);
 
 #endif

@@ -196,7 +196,7 @@ void deleteRow(const string& NAME, int rowNumber) {
 
 // Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
 // indeksom i nudi odabir odredjenog indeksa
-int show_index(const string& NAME, int column_count, int name_index, int index_index) {
+int show_index(const string& NAME, int column_count, int name_index) {
     // Deklaracija input file streama asociranog sa datotekom NAME
     ifstream input(NAME);
     // Provjera da li je stream dobro otvoren ako nije ispisujemo gresku
@@ -206,10 +206,11 @@ int show_index(const string& NAME, int column_count, int name_index, int index_i
     }
     // Ucitavamo vrijednosti redova u vektor help i ispisujemo naziv i indeks za svaki red
     vector<string> help;
+    int count = 1;
     while(!input.eof()) {
         help=load_row(input, column_count);
         if(help[name_index].empty()) break;
-        cout << help[name_index] << " - " << help[index_index] << "\n";
+        cout << help[name_index] << " - " << count++ << "\n";
     }
     // Deklaracija varijable koju cemo vratiti
     int x;

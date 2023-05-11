@@ -96,6 +96,6 @@ void add_department() {
 // Funkcija koja uklanja odsjek iz tabele baze podataka
 void remove_department() {
     int odsjek_za_ukloniti = show_index(DEPARTMENTDATA, DEPARTMENT_COLUMNS, 
-    DEPARTMENT_NAME_INDEX, DEPARTMENT_INDEX_INDEX);
+    DEPARTMENT_NAME_INDEX);
     deleteRow(DEPARTMENTDATA, odsjek_za_ukloniti);
 }
