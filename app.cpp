@@ -63,10 +63,10 @@ int main() {
                     remove_department();
                     break;
                 case 4:
-                    cout << "Izbor 4\n";
+                    add_semester();
                     break;
                 case 5:
-                    cout << "Izbor 5\n";
+                    remove_semester();
                     break;
                 case 6:
                     cout << "Izbor 6\n";

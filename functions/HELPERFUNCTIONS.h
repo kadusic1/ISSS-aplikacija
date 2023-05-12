@@ -14,6 +14,9 @@ void error();
 // kolona
 vector<string> load_row(ifstream& input, int column_count);
 
+// Funkcija za citanje ntog reda
+vector<string> load_nth_row(const string& NAME, int row_index, int column_count);
+
 // Funkcija koja vraca broj linija file streama input
 int line_count(ifstream& input);
 
@@ -48,6 +51,6 @@ void deleteRow(const string& NAME, int rowNumber);
 
 // Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
 // indeksom i nudi odabir odredjenog indeksa
-int show_index(const string& NAME, int column_count, int name_index);
+int show_index(const string& NAME, int column_count, int name_index, int foreign_index);
 
 #endif

@@ -17,6 +17,8 @@ const string COLLEGEDATA = "database/Fakultet.txt"; // lokacija tabele sa inform
 // o fakultetu
 const string DEPARTMENTDATA = "database/Odsjeci.txt"; // lokacija tabele sa informacijama
 // o odsjecima
+const string SEMESTERDATA = "database/Semestri.txt"; // lokacija tabele sa informacijama
+// o semestrima
 
 // Varijable koje opisiju tabelu Osobe.txt
 const int PERSON_NAME_INDEX = 0;
@@ -58,6 +60,12 @@ const int DEPARTMENT_NAME_INDEX = 0;
 const int DEPARTMENT_STUDYTIME_INDEX = 1;
 const int DEPARTMENT_INDEX_INDEX = 2;
 const int DEPARTMENT_COLUMNS = 4; // Broj kolona u tabeli Odsjeci.txt
+
+// Varijable koje opisuju tabelu Semestri.txt
+const int SEMESTER_NAME_INDEX = 0;
+const int SEMESTER_FOREIGN_INDEX = 1; // Opisuje kojem odjseku pripada semestar
+const int SEMESTER_INDEX_INDEX = 2;
+const int SEMESTER_COLUMNS = 3; // Broj kolona u tabeli Semestri.txt
 
 // Kraj provjere
 #endif
