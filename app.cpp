@@ -75,10 +75,10 @@ int main() {
                     remove_subject();
                     break;
                 case 8:
-                    cout << "Izbor 8\n";
+                    add_person();
                     break;
                 case 9:
-                    cout << "Izbor 9\n";
+                    remove_person();
                     break;
             }
             break;

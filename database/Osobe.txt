@@ -1,3 +1,3 @@
-root+root+-1+-1+-1+-1+-1+-1+-1+-1+-1+-1+-1+root+0+-1+-1+-1+superuserdo+
-adi+root+-1+-1+-1+-1+-1+-1+-1+-1+-1+-1+-1+root+1+-1+-1+-1+superuserdo+
-test+root+-1+-1+-1+-1+-1+-1+-1+-1+-1+-1+-1+root+1+-1+-1+-1+superuserdo+
+root+root+0+0+0+0+0+root+superuserdo+
+Adi+Kadusic+4+m+2+Sotversko inzenjerstvo+I+ak11+zm11+
+abc+efg+4+m+2+Sotversko inzenjerstvo+II+abc+abc+
