@@ -4,6 +4,8 @@
 #include <vector>
 #include <sstream>
 
+#include "INDEXDATA.h"
+
 using namespace std;
 
 // Funkcija koja ispisuje poruku o gresci pri otvaranju datoteke
@@ -50,11 +52,13 @@ vector<string> load_nth_row(const string& NAME, int row_index, int column_count)
         if(helper[0].empty()) break;
         if(currentRow == row_index) {
             // Ako smo pronasli trazeni red, vracamo vrijednosti kolona tog reda
+            input.close();
             return helper;
         }
         currentRow++;
     }
     // Ako nismo pronasli trazeni red, vracamo prazan vektor
+    input.close();
     return vector<string>();
 }
 
@@ -72,7 +76,7 @@ int line_count(ifstream& input) {
     // Petlja ce se vrtiti dok ima linija u dokumentu i povecavati brojac
     while(getline(input, line)) {
         count++;
-    } 
+    }
     // Vracamo citanje streama na pocetak
     input.clear();
     input.seekg(0, ios::beg);
@@ -224,8 +228,9 @@ void deleteRow(const string& NAME, int rowNumber) {
 }
 
 // Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
-// indeksom i nudi odabir odredjenog indeksa
-int show_index(const string& NAME, int column_count, int name_index, int foreign_index) {
+// indeksom i nudi odabir odredjenog indeksa, ukoliko je foreign index1 
+// ili foreign index2 manji ili jednak nuli on se ne koristi
+int show_index(const string& NAME, int column_count, int name_index, int foreign_index1, int foreign_index2) {
     // Deklaracija input file streama asociranog sa datotekom NAME
     ifstream input(NAME);
     // Provjera da li je stream dobro otvoren ako nije ispisujemo gresku
@@ -239,10 +244,15 @@ int show_index(const string& NAME, int column_count, int name_index, int foreign
     while(!input.eof()) {
         help=load_row(input, column_count);
         if(help[name_index].empty()) break;
-        if(foreign_index<=0) {
+        if(foreign_index1<=0&&foreign_index2<=0) {
             cout << help[name_index] << " - " << count++ << "\n";
+        } else if(foreign_index2<=0&&foreign_index1>0) {
+            cout << help[name_index] << " - " << help[foreign_index1] << " - " << count++ << "\n";
+        } else if(foreign_index1<=0&&foreign_index2>0) {
+            cout << help[name_index] << " - " << help[foreign_index2] << " - " << count++ << "\n";
         } else {
-            cout << help[name_index] << " - " << help[foreign_index] << " - " << count++ << "\n";
+            cout << help[name_index] << " - " << help[foreign_index1] << " - " <<
+            help[foreign_index2] << " - " << count++ << "\n";
         }
     }
     // Deklaracija varijable koju cemo vratiti
@@ -250,4 +260,42 @@ int show_index(const string& NAME, int column_count, int name_index, int foreign
     // Sigurni unos broja
     number_cin(x, "Vas odabir: ");
     return x;
+}
+
+// Funkcija koja vraca vektor sa ucitanim osoboma, parametar option nam omogucava odabir
+// svih - 0, odabir profesora - 1 ili odabir studenata - 2;
+vector<vector<string>> load_people(int option) {
+    // Pomocni vektor u koji cemo ucitvati vrijednosti
+    vector<vector<string>> helper;
+    // Otvaramo datoteku sa osobama
+    // Provjera da li je doslo do greske
+    ifstream input(PERSONDATA);
+    if(input.fail()) {
+        error();
+        return helper;
+    }
+    // Nalazimo broj linija u datoteci sa osobama
+    int lineCount = line_count(input);
+    input.close();
+    // Ponavljamo onoliko koliko ima linija
+    for(int i = 1; i <= lineCount; i++) {
+        // Sada koristimo parametar option za odredjivanje sta cemo ucitati
+        // Ako je opcija nula ucitavamo sve
+        if(option==0) {
+            helper.push_back(load_nth_row(PERSONDATA, i, PERSON_COLUMNS));
+        } else if(option==1) { // Ako je opcija 1 ucitavamo samo profesore
+            vector<string> help = load_nth_row(PERSONDATA, i, PERSON_COLUMNS);
+            if(help[PERSON_TYPE_INDEX]==PROFESSOR_TYPE)
+                helper.push_back(help);
+        } else if(option==2) { // Ako je opcija 2 ucitavamo samo studente
+            vector<string> help = load_nth_row(PERSONDATA, i, PERSON_COLUMNS);
+            if(help[PERSON_TYPE_INDEX]==STUDENT_TYPE)
+                helper.push_back(help);
+        } else {
+            cout << "Greska u opciji\n";
+            helper.clear();
+            return helper;
+        }
+    }
+    return helper;
 }

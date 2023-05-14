@@ -50,7 +50,12 @@ void copyFile(const string& source, const string& destination);
 void deleteRow(const string& NAME, int rowNumber);
 
 // Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
-// indeksom i nudi odabir odredjenog indeksa
-int show_index(const string& NAME, int column_count, int name_index, int foreign_index);
+// indeksom i nudi odabir odredjenog indeksa, ukoliko je foreign index1 
+// ili foreign index2 manji ili jednak nuli on se ne koristi
+int show_index(const string& NAME, int column_count, int name_index, int foreign_index1, int foreign_index2);
+
+// Funkcija koja vraca vektor sa ucitanim osoboma, parametar option nam omogucava odabir
+// svih - 0, odabir profesora - 1 ili odabir studenata - 2;
+vector<vector<string>> load_people(int option);
 
 #endif

@@ -69,10 +69,10 @@ int main() {
                     remove_semester();
                     break;
                 case 6:
-                    cout << "Izbor 6\n";
+                    add_subject();
                     break;
                 case 7:
-                    cout << "Izbor 7\n";
+                    remove_subject();
                     break;
                 case 8:
                     cout << "Izbor 8\n";

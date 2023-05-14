@@ -19,6 +19,8 @@ const string DEPARTMENTDATA = "database/Odsjeci.txt"; // lokacija tabele sa info
 // o odsjecima
 const string SEMESTERDATA = "database/Semestri.txt"; // lokacija tabele sa informacijama
 // o semestrima
+const string SUBJECTDATA = "database/Predmeti.txt"; // Lokacija tabele sa informacijama
+// o predmetima
 
 // Varijable koje opisiju tabelu Osobe.txt
 const int PERSON_NAME_INDEX = 0;
@@ -66,6 +68,14 @@ const int SEMESTER_NAME_INDEX = 0;
 const int SEMESTER_FOREIGN_INDEX = 1; // Opisuje kojem odjseku pripada semestar
 const int SEMESTER_INDEX_INDEX = 2;
 const int SEMESTER_COLUMNS = 3; // Broj kolona u tabeli Semestri.txt
+
+// Varijable koje opisuju tabelu Predmeti.txt
+const int SUBJECT_NAME_INDEX = 0;
+const int SUBJECT_FOREIGN_INDEX = 1; // Opisuje kojem semestru pripada predmet
+const int SUBJECT_DEPARTMENT_INDEX = 2; // Odsjek kojem predmet pripada 
+const int SUBJECT_PROFESSOR_INDEX = 3; // Opisuje koji je profesor zaduzen za predmet
+const int SUBJECT_INDEX_INDEX = 4;
+const int SUBJECT_COLUMNS = 5; // Broj kolona u tabeli Predmeti.txt
 
 // Kraj provjere
 #endif

@@ -1,2 +1,4 @@
-1+Pravo+1+
-5+Gradjevinarstvo+4+
+I+Sotversko inzenjerstvo+1+
+II+Gradjevinarstvo+2+
+II+Sotversko inzenjerstvo+3+
+I+Gradjevinarstvo+4+
