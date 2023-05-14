@@ -62,6 +62,16 @@ vector<string> load_nth_row(const string& NAME, int row_index, int column_count)
     return vector<string>();
 }
 
+// Funkcija koja pretvara string u vector
+vector<string> vector_to_string(string input) {
+    vector<string> result;
+    stringstream ss(input);
+    string item;
+    while (getline(ss, item, '+')) {
+        result.push_back(item);
+    }
+    return result;
+}
 
 // Funkcija koja vraca broj linija u txt dokumentu na osnovu otvorenog dokumenta tj.
 // fstreama

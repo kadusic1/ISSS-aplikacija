@@ -17,6 +17,9 @@ vector<string> load_row(ifstream& input, int column_count);
 // Funkcija za citanje ntog reda
 vector<string> load_nth_row(const string& NAME, int row_index, int column_count);
 
+// Funkcija koja pretvara string u vector
+vector<string> vector_to_string(string input);
+
 // Funkcija koja vraca broj linija file streama input
 int line_count(ifstream& input);
 
