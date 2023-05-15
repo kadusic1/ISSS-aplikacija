@@ -61,4 +61,7 @@ int show_index(const string& NAME, int column_count, int name_index, int foreign
 // svih - 0, odabir profesora - 1 ili odabir studenata - 2;
 vector<vector<string>> load_people(int option);
 
+// Funkcija koja ucitava 2D vektor svih predmeta u tabeli baze podataka
+vector<vector<string>> load_subjects();
+
 #endif

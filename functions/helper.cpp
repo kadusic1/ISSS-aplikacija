@@ -309,3 +309,24 @@ vector<vector<string>> load_people(int option) {
     }
     return helper;
 }
+
+// Funkcija koja ucitava 2D vektor svih predmeta u tabeli baze podataka
+vector<vector<string>> load_subjects() {
+    // Pomocni vektor u koji cemo ucitvati vrijednosti
+    vector<vector<string>> helper;
+    // Otvaramo datoteku sa osobama
+    // Provjera da li je doslo do greske
+    ifstream input(PERSONDATA);
+    if(input.fail()) {
+        error();
+        return helper;
+    }
+    // Nalazimo broj linija u datoteci sa osobama
+    int lineCount = line_count(input);
+    input.close();
+    // Ponavljamo onoliko koliko ima linija
+    for(int i = 1; i <= lineCount; i++) {
+        helper.push_back(load_nth_row(PERSONDATA, i, PERSON_COLUMNS));
+    }
+    return helper;
+}
