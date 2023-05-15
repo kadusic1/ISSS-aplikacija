@@ -6,11 +6,13 @@
 #include "functions/helper.cpp"
 #include "functions/menu.cpp"
 #include "functions/rootfunctions.cpp"
+#include "functions/functions.cpp"
 
 using namespace std;
 
 int main() {
 
+    LOGIN:
     // Varijabla u kojoj cemo pohraniti podatke o logovanoj osobi
     vector<string> loginData;
     // Varijabla u kojoj se smjesta izbor stranice odabran u menu funkciji
@@ -34,7 +36,8 @@ int main() {
     // Redirekcija na odgovarajucu stranu pomocu switch case
     switch(pageChoice) {
         case 1:
-            break;
+            // Ispisujemo informacije o korisniku
+            my_info(loginData);
         case 2:
             break;
         case 3:
@@ -44,7 +47,9 @@ int main() {
         case 5:
             break;
         case 6:
-            break;
+            cout << "Odlogovali ste se iz accounta\n";
+            cls();
+            goto LOGIN;
         case 7:
             // Napustamo petlju preko labeli i zavrsavamo program
             goto END;
