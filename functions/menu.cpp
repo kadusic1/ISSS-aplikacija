@@ -10,6 +10,7 @@ using namespace std;
 
 const string MENUFILE = "functions/textfiles/showmenu.txt";
 const string ROOTMENUFILE = "functions/textfiles/showrootmenu.txt";
+const string EXAMMENUFILEPROFESSOR = "functions/textfiles/showexammenuprofessor.txt";
 
 // Funkcija za ispis osnovnih podataka o ulogovanom korisniku, a zatim ispis menija
 // i izbor opcija
@@ -58,6 +59,26 @@ int root_menu() {
     show(ROOTMENUFILE);
     // Gornja granica je 5 jer imamo pet opcija
     int upperLimit = 9;
+    // Variabjla u koju smjestamo izbor
+    int unos;
+    // Unosimo sve dok ne unesemo vrijednost od 1 do 5
+    do {
+        // Sigurni unos broja pomocu funkcije number_cin()
+        number_cin(unos, "Vas unos: ");
+        if(unos < 1 || unos > upperLimit) cout << "[GRESKA] Neispravan unos\n";
+    } while(unos < 1 || unos > upperLimit);
+    // Vracamo odabranu vrijednost
+    return unos;
+}
+
+// Funkcija za menu stranice ispiti
+int exam_menu_professor() {
+    // Brisemo ekran
+    cls();
+     // Ispisi datoteku showexammenu.txt
+    show(EXAMMENUFILEPROFESSOR);
+    // Gornja granica je 2 jer imamo 2 opcije
+    int upperLimit = 2;
     // Variabjla u koju smjestamo izbor
     int unos;
     // Unosimo sve dok ne unesemo vrijednost od 1 do 5

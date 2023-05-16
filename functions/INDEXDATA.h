@@ -21,6 +21,8 @@ const string SEMESTERDATA = "database/Semestri.txt"; // lokacija tabele sa infor
 // o semestrima
 const string SUBJECTDATA = "database/Predmeti.txt"; // Lokacija tabele sa informacijama
 // o predmetima
+const string EXAMDATA = "database/Ispiti.txt"; // Lokacija tabele sa informacijama
+// o ispitima
 
 // Varijable koje opisiju tabelu Osobe.txt
 const int PERSON_NAME_INDEX = 0;
@@ -67,6 +69,21 @@ const int SUBJECT_PROFESSOR_INDEX = 3; // Opisuje koji je profesor zaduzen za pr
 const int SUBJECT_PROFESSOR_INDEX_INDEX = 4; // Indeks profesora zaduzenog za predmet
 const int SUBJECT_INDEX_INDEX = 5;
 const int SUBJECT_COLUMNS = 6; // Broj kolona u tabeli Predmeti.txt
+
+// Varijable koje opisuju tabelu Ispiti.txt
+const int EXAM_PROFESSOR_INDEX = 0; // Ime profesora
+const int EXAM_PROFESSOR_SURNAME = 1; // Prezime profesora
+const int EXAM_PROFESSOR_INDEX_INDEX = 2; // ID profesora
+const int EXAM_STUDENT_INDEX = 3; // Ime studenta
+const int EXAM_STUDENT_SURNAME_INDEX = 4; // Prezime studenta
+const int EXAM_STUDENT_INDEX_INDEX = 5; // ID studenta
+const int EXAM_SUBJECT_INDEX  = 6; // Ime predmeta
+const int EXAM_SUBJECT_INDEX_INDEX = 7; // ID predmeta
+const int EXAM_DATE_INDEX = 8; // Datum odrzavanja ispita
+const int EXAM_GRADE_INDEX = 9; // Ocjena
+const int EXAM_CONFIRM_INDEX = 10; // Prijava ispita (default je 0 - nije prijavljen)
+const int EXAM_INDEX_INDEX = 11; // ID ispita
+const int EXAM_COLUMNS = 12; // Broj kolona u tabeli Ispiti.txt
 
 // Kraj provjere
 #endif

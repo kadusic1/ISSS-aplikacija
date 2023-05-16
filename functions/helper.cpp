@@ -316,7 +316,7 @@ vector<vector<string>> load_subjects() {
     vector<vector<string>> helper;
     // Otvaramo datoteku sa osobama
     // Provjera da li je doslo do greske
-    ifstream input(PERSONDATA);
+    ifstream input(SUBJECTDATA);
     if(input.fail()) {
         error();
         return helper;
@@ -326,7 +326,7 @@ vector<vector<string>> load_subjects() {
     input.close();
     // Ponavljamo onoliko koliko ima linija
     for(int i = 1; i <= lineCount; i++) {
-        helper.push_back(load_nth_row(PERSONDATA, i, PERSON_COLUMNS));
+        helper.push_back(load_nth_row(SUBJECTDATA, i, SUBJECT_COLUMNS));
     }
     return helper;
 }

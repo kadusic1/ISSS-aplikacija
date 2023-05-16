@@ -1,4 +1,10 @@
 root+root+0+0+0+0+0+root+superuserdo+
-Adi+Kadusic+4+m+2+Sotversko inzenjerstvo+I+ak11+zm11+
-abc+efg+4+m+2+Sotversko inzenjerstvo+II+abc+abc+
-Test+Test+4+m+1+0+0+test123+test123+
+Adi+Kadusic+1+m+2+Softversko inzenjerstvo+II+adi.kadusic.22@size.ba+testtest+
+Kemal+Muminovic+2+m+2+Softversko inzenjerstvo+II+kemal.muminovic.22@size.ba+test123+
+Adis+Masic+3+m+2+Softversko inzenjerstvo+II+adis.masic.22@size.ba+1234+
+Niko+Neznanovic+4+m+2+Softversko inzenjerstvo+II+niko.neznanovic.22@size.ba+tesst+
+Tarik+Glamocak+5+m+2+Softversko inzenjerstvo+II+tarik.glamocak.22@size.ba+tarik123+
+Nevzudin+Buzadjija+6+m+1+0+0+nevzudin.buzadjija@size.ba+12345678+
+Alen+Begovic+7+m+1+0+0+alen.begovic@size.ba+test1234+
+Afan+Ceco+8+m+1+0+0+afan.ceco@size.ba+afanceco+
+Test+Test+9+m+2+Softversko inzenjerstvo+II+test@size.ba+test+

@@ -43,6 +43,16 @@ int main() {
         case 3:
             break;
         case 4:
+            int exam_choice;
+            // Stranica vezana za ispita
+            // Ukoliko je rijec o profesoru dajemo mogucnost pokretanja i ocjene ispita
+            if(loginData[PERSON_TYPE_INDEX]==PROFESSOR_TYPE) {
+                exam_choice = exam_menu_professor();
+            }
+            // Opcija 1 - pokretanje ispita
+            if(exam_choice==1) {
+                start_exam(loginData);
+            }   
             break;
         case 5:
             break;

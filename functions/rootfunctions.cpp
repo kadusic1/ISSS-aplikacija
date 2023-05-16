@@ -175,7 +175,8 @@ void add_subject() {
     vector<vector<string>> professors = load_people(1);
     cout << "Odabir profesora\n";
     for(int i = 0; i < professors.size(); i++) {
-        cout << i+1 << " - " << professors[i][PERSON_NAME_INDEX] << "\n";
+        cout << i+1 << " - " << professors[i][PERSON_NAME_INDEX] << " " <<
+        professors[i][PERSON_SURNAME_INDEX] << "\n";
     } 
     number_cin(x, "Vas odabir: ");
     data.push_back(professors[x-1][PERSON_NAME_INDEX]);
@@ -228,7 +229,7 @@ void add_person() {
     getline(cin, help);
     data.push_back(help); 
     // Automatski postavljamo vrijednost indeksa koristeci funkciju next_index
-    index = next_index(SUBJECTDATA, SUBJECT_COLUMNS, SUBJECT_INDEX_INDEX);
+    index = next_index(PERSONDATA, PERSON_COLUMNS, PERSON_INDEX_NUMBER);
     // Ukoliko je vrijednost -1 doslo je do greske pa izlazimo iz funkcije
     if(index==-1) return;
     // Postavljamo index u vektor
@@ -256,7 +257,7 @@ void add_person() {
         cout << "Odabir odjseka na kojem je osoba\n";
         int x = show_index(DEPARTMENTDATA, DEPARTMENT_COLUMNS, DEPARTMENT_NAME_INDEX, 0, 0);
         data.push_back(load_nth_row(DEPARTMENTDATA, x, DEPARTMENT_COLUMNS)[DEPARTMENT_NAME_INDEX]);
-        cout << "Odabiranje semestra na kojem je predmet\n";
+        cout << "Odabiranje semestra na kojem je osoba\n";
         x = show_index(SEMESTERDATA, SEMESTER_COLUMNS, SEMESTER_NAME_INDEX, SEMESTER_FOREIGN_INDEX, 0);
         data.push_back(load_nth_row(SEMESTERDATA, x, SEMESTER_COLUMNS)[SEMESTER_NAME_INDEX]);
     }
