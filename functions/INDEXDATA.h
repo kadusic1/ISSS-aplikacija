@@ -64,8 +64,9 @@ const int SUBJECT_NAME_INDEX = 0;
 const int SUBJECT_FOREIGN_INDEX = 1; // Opisuje kojem semestru pripada predmet
 const int SUBJECT_DEPARTMENT_INDEX = 2; // Odsjek kojem predmet pripada 
 const int SUBJECT_PROFESSOR_INDEX = 3; // Opisuje koji je profesor zaduzen za predmet
-const int SUBJECT_INDEX_INDEX = 4;
-const int SUBJECT_COLUMNS = 5; // Broj kolona u tabeli Predmeti.txt
+const int SUBJECT_PROFESSOR_INDEX_INDEX = 4; // Indeks profesora zaduzenog za predmet
+const int SUBJECT_INDEX_INDEX = 5;
+const int SUBJECT_COLUMNS = 6; // Broj kolona u tabeli Predmeti.txt
 
 // Kraj provjere
 #endif

@@ -6,6 +6,7 @@
 #include "HELPERFUNCTIONS.h"
 #include "INDEXDATA.h"
 
+// Funkcija koja ispisuje informacije o trenutnoj osobi
 void my_info(const vector<string>& data) {
     cls();
     cout << "Vase informacije\n";

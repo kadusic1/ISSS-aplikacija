@@ -1,3 +1,2 @@
-Racunarske mreze+I+Gradjevinarstvo+adi+1+
-Elektronika+I+Sotversko inzenjerstvo+test+2+
-Osnove elektrotehnike+I+Sotversko inzenjerstvo+adi+3+
+a+I+Sotversko inzenjerstvo+Test+4+1+
+b+I+Gradjevinarstvo+Test+4+2+

@@ -179,6 +179,7 @@ void add_subject() {
     } 
     number_cin(x, "Vas odabir: ");
     data.push_back(professors[x-1][PERSON_NAME_INDEX]);
+    data.push_back(professors[x-1][PERSON_INDEX_NUMBER]);
     // Automatski postavljamo vrijednost indeksa koristeci funkciju next_index
     index = next_index(SUBJECTDATA, SUBJECT_COLUMNS, SUBJECT_INDEX_INDEX);
     // Ukoliko je vrijednost -1 doslo je do greske pa izlazimo iz funkcije
