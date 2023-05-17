@@ -202,3 +202,51 @@ void cancel_exam(const vector<string>& data) {
     // Modifikujemo tabelu
     modifyRow(EXAMDATA, rowNumber, format_for_database(newData));
 }
+
+void mark_exam(const vector<string>& data) {
+    cout << "Ocjenjivanje ispita\n";
+    // Smjestamo vrijednost svih ispita u vektor exams
+    vector<vector<string>> exams = load_exams();
+    // Za svaki unos u exams provjeravamo da li id profesora u data odgovra idu
+    // profesora u exams, te da li je to zadnji ispit sa tim indeksom
+    for (int i = 0; i < exams.size(); i++) {
+    if ((i==0||exams[i-1][EXAM_INDEX_INDEX]!=exams[i][EXAM_INDEX_INDEX]) && exams[i][EXAM_PROFESSOR_INDEX_INDEX] == data[PERSON_INDEX_NUMBER]) {
+        cout << exams[i][EXAM_SUBJECT_INDEX] << " - " << exams[i][EXAM_INDEX_INDEX] << "\n";
+        }
+    }
+    // Pomocna varijabla
+    int x;
+    number_cin(x, "Vas odabir: ");
+    // Ocjenjujemo svakog studenta u izabranom ispitu, brojimo redove pomocu varijable count
+    int count = 0;
+    // Bool varijabla za ispis prdmeta ispita i datuma
+    bool written = false;
+    for(auto a : exams) {
+        count++;
+        // Provjera da li je to stavka izabranog ispita
+        if(a[EXAM_INDEX_INDEX]==to_string(x)) {
+            if(written==false) {
+                // Ispis predmeta i datuma ispita
+                cout << a[EXAM_SUBJECT_INDEX] << " - " << a[EXAM_PROFESSOR_INDEX] 
+                << " " << a[EXAM_PROFESSOR_SURNAME] 
+                << " - " << a[EXAM_DATE_INDEX] << "\n";
+                line();
+                written=true;
+            }
+            // Provjera da li je ispit prijavljen i da li je vec ocjenjen
+            if(a[EXAM_CONFIRM_INDEX]=="1") {
+                cout << "Student - " << a[EXAM_STUDENT_INDEX] << " " << a[EXAM_STUDENT_SURNAME_INDEX] << "\n";
+                // Unos ocjene
+                int ocjena;
+                limited_number_cin(ocjena, "Unesite ocjenu: ", 5, 10);
+                // Vektor za modifikaciju
+                vector<string> newData;
+                newData = a;
+                // Modifikacija ocjene
+                newData[EXAM_GRADE_INDEX] = to_string(ocjena);
+                // Konacno upisujemo red
+                modifyRow(EXAMDATA, count, format_for_database(newData));
+            }
+        }
+    }
+}

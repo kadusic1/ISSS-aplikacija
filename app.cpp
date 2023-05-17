@@ -51,7 +51,9 @@ int main() {
                 // Opcija 1 - pokretanje ispita
                 if(exam_choice==1) {
                     start_exam(loginData);
-                }   
+                } else {
+                    mark_exam(loginData);
+                }
             } else {
                 exam_choice = exam_menu_student();
                 // Opcija 1 - prijava ispita
