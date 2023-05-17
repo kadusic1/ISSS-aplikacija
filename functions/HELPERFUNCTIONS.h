@@ -70,4 +70,8 @@ vector<vector<string>> load_subjects();
 // Funkcija koja ucitava 2D vektor svih ispita u tabeli baze podataka
 vector<vector<string>> load_exams();
 
+// Funkcija koja omogucava unos broja samo izmedju odredjenih granica
+template <typename T>
+void limited_number_cin(T& x, const string& message, int lowerLimit, int upperLimit);
+
 #endif

@@ -383,3 +383,14 @@ vector<vector<string>> load_exams() {
     }
     return helper;
 }
+
+// Funkcija koja omogocuje unos broja samo izmedju odredjenih granica
+template <typename T>
+void limited_number_cin(T& x, const string& message, int lowerLimit, int upperLimit) {
+    do {
+        number_cin(x, message);
+        if(x < lowerLimit || x > upperLimit) {
+            cout << "Error: broj nije unesen u adekvatnim granicama.\n";
+        }
+    } while(x < lowerLimit || x > upperLimit);
+}

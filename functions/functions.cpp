@@ -58,7 +58,7 @@ void start_exam(const vector<string>& data) {
     }
     // Deklarisemo varijablu za odabir i unosimo ju
     int choice;
-    number_cin(choice, "Vas odabir: ");
+    limited_number_cin(choice, "Vas odabir: ", 1, count);
     // Ucitavamo izabrani predmet u vektor
     vector<string> subject = load_nth_row(SUBJECTDATA, choice, SUBJECT_COLUMNS);
     // Trazimo upit za datum ispita
@@ -128,7 +128,9 @@ void confirm_exam(const vector<string>& data) {
     // Ispisujemo listu ispita za prijavu
     // Za svaki unos u exams provjeravamo da li id studenta u data odgovra idu
     // stduenta u exams, te da li je ispit vec prijavljen
+    int count = 0;
     for(auto a : exams) {
+        count++;
         if(a[EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]&&a[EXAM_CONFIRM_INDEX]=="0") {
             cout << a[EXAM_PROFESSOR_INDEX] << " " << a[EXAM_PROFESSOR_SURNAME]
             << " - " << a[EXAM_SUBJECT_INDEX] << " - " << 
@@ -168,6 +170,7 @@ void cancel_exam(const vector<string>& data) {
     // Ispisujemo listu ispita za prijavu
     // Za svaki unos u exams provjeravamo da li id studenta u data odgovra idu
     // stduenta u exams, te da li je ispit vec prijavljen
+    int count = 0;
     for(auto a : exams) {
         if(a[EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]&&a[EXAM_CONFIRM_INDEX]=="1") {
             cout << a[EXAM_PROFESSOR_INDEX] << " " << a[EXAM_PROFESSOR_SURNAME]
