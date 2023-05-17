@@ -57,7 +57,9 @@ int main() {
                 // Opcija 1 - prijava ispita
                 if(exam_choice==1) {
                     confirm_exam(loginData);
-                } 
+                } else {
+                    cancel_exam(loginData);
+                }
             }
             break;
         case 5:
