@@ -3,4 +3,5 @@ Stranica ispiti
 Izbor funkcije:
     1 - Pokreni ispit
     2 - Ocjeni ispit
+    3 - Izbrisi ispit
 ------------------------------------------------------

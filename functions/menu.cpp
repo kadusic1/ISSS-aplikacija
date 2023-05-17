@@ -80,7 +80,7 @@ int exam_menu_professor() {
      // Ispisi datoteku showexammenu.txt
     show(EXAMMENUFILEPROFESSOR);
     // Gornja granica je 2 jer imamo 2 opcije
-    int upperLimit = 2;
+    int upperLimit = 3;
     // Variabjla u koju smjestamo izbor
     int unos;
     // Unosimo sve dok ne unesemo vrijednost od 1 do 5

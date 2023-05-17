@@ -12,10 +12,3 @@ Nevzudin+Buzadjija+6+Niko+Neznanovic+4+Objektno orijentisano programiranje+6+19.
 Nevzudin+Buzadjija+6+Tarik+Glamocak+5+Objektno orijentisano programiranje+6+19.05.2023+0+0+2+
 Nevzudin+Buzadjija+6+Test+Test+9+Objektno orijentisano programiranje+6+19.05.2023+0+0+2+
 Nevzudin+Buzadjija+6+Nejra+Smajlovic+10+Objektno orijentisano programiranje+6+19.05.2023+0+0+2+
-Nevzudin+Buzadjija+6+Adi+Kadusic+1+Algoritmi i strukture podataka+7+22.05.2023+7.700000+1+3+
-Nevzudin+Buzadjija+6+Kemal+Muminovic+2+Algoritmi i strukture podataka+7+22.05.2023+0+0+3+
-Nevzudin+Buzadjija+6+Adis+Masic+3+Algoritmi i strukture podataka+7+22.05.2023+0+0+3+
-Nevzudin+Buzadjija+6+Niko+Neznanovic+4+Algoritmi i strukture podataka+7+22.05.2023+0+0+3+
-Nevzudin+Buzadjija+6+Tarik+Glamocak+5+Algoritmi i strukture podataka+7+22.05.2023+8.200000+1+3+
-Nevzudin+Buzadjija+6+Test+Test+9+Algoritmi i strukture podataka+7+22.05.2023+0+0+3+
-Nevzudin+Buzadjija+6+Nejra+Smajlovic+10+Algoritmi i strukture podataka+7+22.05.2023+10.000000+1+3+

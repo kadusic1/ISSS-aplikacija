@@ -51,8 +51,10 @@ int main() {
                 // Opcija 1 - pokretanje ispita
                 if(exam_choice==1) {
                     start_exam(loginData);
-                } else {
+                } else if(exam_choice==2) {
                     mark_exam(loginData);
+                } else {
+                    delete_exam(loginData);
                 }
             } else {
                 exam_choice = exam_menu_student();
