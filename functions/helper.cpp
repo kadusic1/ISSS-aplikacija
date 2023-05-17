@@ -314,19 +314,40 @@ vector<vector<string>> load_people(int option) {
 vector<vector<string>> load_subjects() {
     // Pomocni vektor u koji cemo ucitvati vrijednosti
     vector<vector<string>> helper;
-    // Otvaramo datoteku sa osobama
+    // Otvaramo datoteku sa predmetima
     // Provjera da li je doslo do greske
     ifstream input(SUBJECTDATA);
     if(input.fail()) {
         error();
         return helper;
     }
-    // Nalazimo broj linija u datoteci sa osobama
+    // Nalazimo broj linija u datoteci sa predmetima
     int lineCount = line_count(input);
     input.close();
     // Ponavljamo onoliko koliko ima linija
     for(int i = 1; i <= lineCount; i++) {
         helper.push_back(load_nth_row(SUBJECTDATA, i, SUBJECT_COLUMNS));
+    }
+    return helper;
+}
+
+// Funkcija koja ucitava 2D vektor svih ispita u tabeli baze podataka
+vector<vector<string>> load_exams() {
+    // Pomocni vektor u koji cemo ucitvati vrijednosti
+    vector<vector<string>> helper;
+    // Otvaramo datoteku sa ispitima
+    // Provjera da li je doslo do greske
+    ifstream input(EXAMDATA);
+    if(input.fail()) {
+        error();
+        return helper;
+    }
+    // Nalazimo broj linija u datoteci sa ispitima
+    int lineCount = line_count(input);
+    input.close();
+    // Ponavljamo onoliko koliko ima linija
+    for(int i = 1; i <= lineCount; i++) {
+        helper.push_back(load_nth_row(EXAMDATA, i, EXAM_COLUMNS));
     }
     return helper;
 }

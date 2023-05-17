@@ -118,3 +118,9 @@ void start_exam(const vector<string>& data) {
     out.close();
     cout << "Ispit uspjesno postavljen\n";
 }
+
+// Funkcija koja omogucava studentu da potvrdi ispit
+void confirm_exam(const vector<string>& data) {
+    // Smjestamo vrijednost svih ispita u vektor exams
+    vector<vector<string>> exams = load_exams();
+}

@@ -64,4 +64,7 @@ vector<vector<string>> load_people(int option);
 // Funkcija koja ucitava 2D vektor svih predmeta u tabeli baze podataka
 vector<vector<string>> load_subjects();
 
+// Funkcija koja ucitava 2D vektor svih ispita u tabeli baze podataka
+vector<vector<string>> load_exams();
+
 #endif

@@ -16,3 +16,10 @@ Afan+Ceco+8+Adis+Masic+3+Racunarske arhitekture+8+27.05.2023+0+0+3+
 Afan+Ceco+8+Niko+Neznanovic+4+Racunarske arhitekture+8+27.05.2023+0+0+3+
 Afan+Ceco+8+Tarik+Glamocak+5+Racunarske arhitekture+8+27.05.2023+0+0+3+
 Afan+Ceco+8+Test+Test+9+Racunarske arhitekture+8+27.05.2023+0+0+3+
+Nevzudin+Buzadjija+6+Adi+Kadusic+1+Objektno orijentisano programiranje+6+27.07.2023+0+0+4+
+Nevzudin+Buzadjija+6+Kemal+Muminovic+2+Objektno orijentisano programiranje+6+27.07.2023+0+0+4+
+Nevzudin+Buzadjija+6+Adis+Masic+3+Objektno orijentisano programiranje+6+27.07.2023+0+0+4+
+Nevzudin+Buzadjija+6+Niko+Neznanovic+4+Objektno orijentisano programiranje+6+27.07.2023+0+0+4+
+Nevzudin+Buzadjija+6+Tarik+Glamocak+5+Objektno orijentisano programiranje+6+27.07.2023+0+0+4+
+Nevzudin+Buzadjija+6+Test+Test+9+Objektno orijentisano programiranje+6+27.07.2023+0+0+4+
+Nevzudin+Buzadjija+6+Nejra+Smajlovic+10+Objektno orijentisano programiranje+6+27.07.2023+0+0+4+
