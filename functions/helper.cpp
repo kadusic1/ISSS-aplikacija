@@ -237,6 +237,38 @@ void deleteRow(const string& NAME, int rowNumber) {
     copyFile(help, NAME);
 }
 
+// Funkcija koja mijenja vrijednost odredjenog reda u tabeli baze podataka
+void modifyRow(const string& NAME, int rowNumber, const string& newRowData) {
+    const string PATH = "functions/textfiles/";
+    // Stream za citanje podataka iz originalnog fajla
+    ifstream input(NAME);
+    // String za odredjivanje temporary fajla temp.txt
+    string help = PATH + "temp.txt";
+    // String za upis podataka u temporary file
+    ofstream tempFile(help);
+    // Brojac trenutnog reda
+    int currentRow = 1;
+    // Pomocna varijabla u koju cemo upisivati redove
+    string row;
+    // Petlja se ponavlja do kraja fajla
+    while (getline(input, row)) {
+        if (currentRow == rowNumber) {
+            // Zamjenjujemo red sa novom vrijednoscu
+            tempFile << newRowData << endl;
+        } else {
+            // Ostali redovi se kopiraju kao i prije
+            tempFile << row << endl;
+        }
+        // Uvecavamo vrijednost trenutnog reda
+        currentRow++;
+    }
+    // Zatvaramo oba fajla
+    input.close();
+    tempFile.close();
+    // Kopiramo uredjene podatke (sa izmijenjenim redom) u originalni fajl
+    copyFile(help, NAME);
+}
+
 // Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
 // indeksom i nudi odabir odredjenog indeksa, ukoliko je foreign index1 
 // ili foreign index2 manji ili jednak nuli on se ne koristi

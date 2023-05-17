@@ -48,11 +48,17 @@ int main() {
             // Ukoliko je rijec o profesoru dajemo mogucnost pokretanja i ocjene ispita
             if(loginData[PERSON_TYPE_INDEX]==PROFESSOR_TYPE) {
                 exam_choice = exam_menu_professor();
+                // Opcija 1 - pokretanje ispita
+                if(exam_choice==1) {
+                    start_exam(loginData);
+                }   
+            } else {
+                exam_choice = exam_menu_student();
+                // Opcija 1 - prijava ispita
+                if(exam_choice==1) {
+                    confirm_exam(loginData);
+                } 
             }
-            // Opcija 1 - pokretanje ispita
-            if(exam_choice==1) {
-                start_exam(loginData);
-            }   
             break;
         case 5:
             break;

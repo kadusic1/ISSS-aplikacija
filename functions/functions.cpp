@@ -123,4 +123,37 @@ void start_exam(const vector<string>& data) {
 void confirm_exam(const vector<string>& data) {
     // Smjestamo vrijednost svih ispita u vektor exams
     vector<vector<string>> exams = load_exams();
+    // Ispisujemo listu ispita za prijavu
+    // Za svaki unos u exams provjeravamo da li id studenta u data odgovra idu
+    // stduenta u exams
+    for(auto a : exams) {
+        if(a[EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]) {
+            cout << a[EXAM_PROFESSOR_INDEX] << " " << a[EXAM_PROFESSOR_SURNAME]
+            << " - " << a[EXAM_SUBJECT_INDEX] << " - " << 
+            a[EXAM_DATE_INDEX] << " - " << a[EXAM_INDEX_INDEX] << "\n";
+        }
+    }
+    // Pomocna varijabla
+    int x;
+    number_cin(x, "Vas odabir: ");
+    // Vektor koji ce sadrzavati promijenjeni red
+    vector<string> newData;
+    // Broj reda
+    int rowNumber = 0;
+    // Trazimo odabranu stavku u tabeli
+    for(int i = 0; i < exams.size(); i++) {
+        // Provjeravamo kada je ID odabranog ispita isti kao ID u vektori i ID ucitanog
+        // studenta isti kao ID u vektori
+        if(exams[i][EXAM_INDEX_INDEX]==to_string(x)&&exams[i][EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]) {
+            // Spremamo novi red
+            newData = exams[i];
+            // Spremamo broj reda
+            rowNumber = i+1;
+            break;
+        }
+    }
+    // Mijenajmo status prijavljenog na 1 - prijavljen
+    newData[EXAM_CONFIRM_INDEX] = "1";
+    // Modifikujemo tabelu
+    modifyRow(EXAMDATA, rowNumber, format_for_database(newData));
 }

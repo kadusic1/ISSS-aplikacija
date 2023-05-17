@@ -52,6 +52,9 @@ void copyFile(const string& source, const string& destination);
 // Funkcija koja brise odredjeni red iz tabele baze podataka
 void deleteRow(const string& NAME, int rowNumber);
 
+// Funkcija koja mijenja vrijednost odredjenog reda u tabeli baze podataka
+void modifyRow(const string& NAME, int rowNumber, const string& newRowData);
+
 // Funkcija koja prikazuje nazive svih elemenata iz baze podataka sa odgovarajucim
 // indeksom i nudi odabir odredjenog indeksa, ukoliko je foreign index1 
 // ili foreign index2 manji ili jednak nuli on se ne koristi
