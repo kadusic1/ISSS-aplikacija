@@ -74,4 +74,8 @@ vector<vector<string>> load_exams();
 template <typename T>
 void limited_number_cin(T& x, const string& message, int lowerLimit, int upperLimit);
 
+// Funkcija koja provjerava prazan unos
+// Funkcija koja provjerava prazan unos
+string notemptycin(string& help);
+
 #endif

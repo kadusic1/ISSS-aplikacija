@@ -394,3 +394,13 @@ void limited_number_cin(T& x, const string& message, int lowerLimit, int upperLi
         }
     } while(x < lowerLimit || x > upperLimit);
 }
+
+// Funkcija koja provjerava prazan unos
+string notemptycin(string& help) {
+    do {
+        getline(cin, help);
+        if(help.empty()) cout << "Unos ne moze biti prazan\n";
+        if(help=="X") return help;
+    } while(help.empty());
+    return help;
+}

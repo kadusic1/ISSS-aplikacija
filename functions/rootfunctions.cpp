@@ -12,7 +12,7 @@ using namespace std;
 void edit_college_info() {
     // Na pocetku funkcije brisemo ekran
     cls();
-    cout << "Uredjivanje podataka o fakultetu\n";
+    cout << "Uredjivanje podataka o fakultetu (Za odustajanje unesi X u prvom unosu)\n";
     line();
     // String help je pomoc za unos, a u vektor data pohranjujemo sve unose
     string help;
@@ -20,22 +20,28 @@ void edit_college_info() {
     // Unosime sve podatke za fakultet (ime, adresa, grad, postanski broj, drzava,
     // web stranica)
     cout << "Unesite ime fakulteta: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help);
     cout << "Unesite adresu fakulteta: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help);
     cout << "Unesite naziv grada iz kojeg je fakultet: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     cout << "Unesite postanski broj grada iz kojeg je fakultet: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     cout << "Unesite naziv drzave iz koje je fakultet: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     cout << "Unesite web stranicu fakulteta: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help);
 
     // Iz vektora data dobijamo string pogodan za upis jednog reda u bazu podataka
@@ -57,7 +63,7 @@ void edit_college_info() {
 void add_department() {
     // Na pocetku funkcije brisemo ekran
     cls();
-    cout << "Dodavanje odsjeka\n";
+    cout << "Dodavanje odsjeka (Za odustajanje unesi X u prvom unosu)\n";
     line();
     // String help je pomoc za unos, a u vektor data pohranjujemo sve unose
     string help;
@@ -67,10 +73,12 @@ void add_department() {
     // Unosime sve podatke za fakultet (naziv, trajanje studiranja, index se unosi
     // automatski)
     cout << "Unesite naziv odsjeka: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     cout << "Unesite trajanje studiranja: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     // Automatski postavljamo vrijednost indeksa koristeci funkciju next_index
     index = next_index(DEPARTMENTDATA, DEPARTMENT_COLUMNS, DEPARTMENT_INDEX_INDEX);
@@ -104,7 +112,7 @@ void remove_department() {
 void add_semester() {
     // Na pocetku funkcije brisemo ekran
     cls();
-    cout << "Dodavanje semestra\n";
+    cout << "Dodavanje semestra (Za odustajanje unesi X u prvom unosu)\n";
     line();
     // String help je pomoc za unos, a u vektor data pohranjujemo sve unose
     string help;
@@ -114,7 +122,8 @@ void add_semester() {
     // Unosime sve podatke za fakultet (naziv, trajanje studiranja, index se unosi
     // automatski)
     cout << "Unesite broj semestra: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     cout << "Odabiranje odsjeka na kojem je semestar\n";
     int x = show_index(DEPARTMENTDATA, DEPARTMENT_COLUMNS, DEPARTMENT_NAME_INDEX, 0, 0);
@@ -151,7 +160,7 @@ void remove_semester() {
 void add_subject() {
     // Na pocetku funkcije brisemo ekran
     cls();
-    cout << "Dodavanje predmeta\n";
+    cout << "Dodavanje predmeta (Za odustajanje unesi X u prvom unosu)\n";
     line();
     // String help je pomoc za unos, a u vektor data pohranjujemo sve unose
     string help;
@@ -161,7 +170,8 @@ void add_subject() {
     // Unosime sve podatke za fakultet (naziv, odjsek, semestar, profesor, index se unosi
     // automatski)
     cout << "Unesite naziv predmeta: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     // Odabir semestra
     cout << "Odabiranje semestra na kojem je predmet\n";
@@ -213,7 +223,7 @@ void remove_subject() {
 void add_person() {
     // Na pocetku funkcije brisemo ekran
     cls();
-    cout << "Dodavanje osobe\n";
+    cout << "Dodavanje osobe (Za odustajanje unesi X u prvom unosu)\n";
     line();
     // String help je pomoc za unos, a u vektor data pohranjujemo sve unose
     string help;
@@ -223,10 +233,12 @@ void add_person() {
     // Unosime sve podatke za fakultet (ime, prezime, semestar, profesor, index se unosi
     // automatski)
     cout << "Unesite ime osobe: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     cout << "Unesite prezime osobe: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     // Automatski postavljamo vrijednost indeksa koristeci funkciju next_index
     index = next_index(PERSONDATA, PERSON_COLUMNS, PERSON_INDEX_NUMBER);
@@ -262,11 +274,13 @@ void add_person() {
         data.push_back(load_nth_row(SEMESTERDATA, x, SEMESTER_COLUMNS)[SEMESTER_NAME_INDEX]);
     }
     cout << "Unesite email osobe: ";
-    getline(cin, help);
+    notemptycin(help);
+    if(help=="X") return;
     data.push_back(help); 
     cout << "Unesite password osobe: ";
-    getline(cin, help);
+    notemptycin(help);
     data.push_back(help);
+    if(help=="X") return;
     // Iz vektora data dobijamo string pogodan za upis jednog reda u bazu podataka
     string row = format_for_database(data);
     // Otvaramo stream za upis podataka u append nacinu rada
