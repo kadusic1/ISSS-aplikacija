@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <iomanip>
 
 #include "HELPERFUNCTIONS.h"
 #include "INDEXDATA.h"
@@ -44,23 +45,46 @@ void my_info(const vector<string>& data) {
 // ime predmeta, datum i ocjena (ocjena je na pocetku 0)
 void start_exam(const vector<string>& data) {
     cout << "Najava ispita\n";
+    line();
+    // Koristimo vektor za pracenje odabira
+    vector<int> tracker;
     // Smjestamo vrijednost svih predmeta u vektor subjects
     vector<vector<string>> subjects = load_subjects();
     // Inicijaliziramo vrijednost brojaca na 0
     int count = 0;
+    int count2 = 0;
     for(auto a : subjects) {
         // Povecavamo brojac za svaku stavku u vektoru
         count++;
         // Ukoliko predmet pripada trazenom profesoru nudimo za pokretanje ispita
         if(a[SUBJECT_PROFESSOR_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]) {
             cout << a[SUBJECT_NAME_INDEX] << " - " << count << "\n";
+            tracker.push_back(count);
+            count2++;
         }
     }
-    // Deklarisemo varijablu za odabir i unosimo ju
-    int choice;
-    limited_number_cin(choice, "Vas odabir: ", 1, count);
+    if(count2==0) {
+        cout << "Profesor nema evidentiranih predmeta\n";
+        return;
+    }
+    cout << "ODUSTANI - 0\n";
+    line();
+    // Pomocna varijabla
+    bool test = false;
+    int x;
+    while(!test) {
+        number_cin(x, "Vas odabir: ");
+        if(x==0) return;
+        for(auto a : tracker) {
+            if(x==a) test=true;
+        }
+        if(!test) {
+            cout << "Error: nije unesen adekvatan broj.\n";
+        }
+    }
+    if(x==0) return;
     // Ucitavamo izabrani predmet u vektor
-    vector<string> subject = load_nth_row(SUBJECTDATA, choice, SUBJECT_COLUMNS);
+    vector<string> subject = load_nth_row(SUBJECTDATA, x, SUBJECT_COLUMNS);
     // Trazimo upit za datum ispita
     string date;
     cout << "Unesite datum ispita: ";
@@ -118,28 +142,51 @@ void start_exam(const vector<string>& data) {
     // Zatvaramo filestream
     out.close();
     cout << "Ispit uspjesno postavljen\n";
+    line();
 }
 
 // Funkcija koja omogucava studentu da potvrdi ispit
 void confirm_exam(const vector<string>& data) {
     cout << "Prijava ispita\n";
+    line();
+    // Koristimo vektor za pracenje odabira
+    vector<int> tracker;
     // Smjestamo vrijednost svih ispita u vektor exams
     vector<vector<string>> exams = load_exams();
     // Ispisujemo listu ispita za prijavu
     // Za svaki unos u exams provjeravamo da li id studenta u data odgovra idu
     // stduenta u exams, te da li je ispit vec prijavljen
     int count = 0;
+    int count2 = 0;
     for(auto a : exams) {
         count++;
-        if(a[EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]&&a[EXAM_CONFIRM_INDEX]=="0") {
+        if(a[EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]&&a[EXAM_CONFIRM_INDEX]=="0"&&stoi(a[EXAM_GRADE_INDEX]) < 5) {
             cout << a[EXAM_PROFESSOR_INDEX] << " " << a[EXAM_PROFESSOR_SURNAME]
             << " - " << a[EXAM_SUBJECT_INDEX] << " - " << 
             a[EXAM_DATE_INDEX] << " - " << a[EXAM_INDEX_INDEX] << "\n";
+            tracker.push_back(stoi(a[EXAM_INDEX_INDEX]));
+            count2++;
         }
     }
+    if(count2==0) {
+        cout << "Nema ispita za prijavu\n";
+        return;
+    }
+    cout << "ODUSTANI - 0\n";
+    line();
     // Pomocna varijabla
+    bool test = false;
     int x;
-    number_cin(x, "Vas odabir: ");
+    while(!test) {
+        number_cin(x, "Vas odabir: ");
+        if(x==0) return;
+        for(auto a : tracker) {
+            if(x==a) test=true;
+        }
+        if(!test) {
+            cout << "Error: nije unesen adekvatan broj.\n";
+        }
+    }
     // Vektor koji ce sadrzavati promijenjeni red
     vector<string> newData;
     // Broj reda
@@ -165,22 +212,44 @@ void confirm_exam(const vector<string>& data) {
 // Funkcija koja omogucava studentu da odgodi ispit
 void cancel_exam(const vector<string>& data) {
     cout << "Odgoda ispita\n";
+    line();
+    // Koristimo vektor za pracenje odabira
+    vector<int> tracker;
     // Smjestamo vrijednost svih ispita u vektor exams
     vector<vector<string>> exams = load_exams();
     // Ispisujemo listu ispita za prijavu
     // Za svaki unos u exams provjeravamo da li id studenta u data odgovra idu
     // stduenta u exams, te da li je ispit vec prijavljen
     int count = 0;
+    int count2 = 0;
     for(auto a : exams) {
-        if(a[EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]&&a[EXAM_CONFIRM_INDEX]=="1") {
+        if(a[EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]&&a[EXAM_CONFIRM_INDEX]=="1"&&stoi(a[EXAM_GRADE_INDEX]) < 5) {
             cout << a[EXAM_PROFESSOR_INDEX] << " " << a[EXAM_PROFESSOR_SURNAME]
             << " - " << a[EXAM_SUBJECT_INDEX] << " - " << 
             a[EXAM_DATE_INDEX] << " - " << a[EXAM_INDEX_INDEX] << "\n";
+            tracker.push_back(stoi(a[EXAM_INDEX_INDEX]));
+            count2++;
         }
     }
+    if(count2 == 0) {
+        cout << "Nema prijavljenih ispita\n";
+        return;
+    }
+    cout << "ODUSTANI - 0\n";
+    line();
     // Pomocna varijabla
+    bool test = false;
     int x;
-    number_cin(x, "Vas odabir: ");
+    while(!test) {
+        number_cin(x, "Vas odabir: ");
+        if(x==0) return;
+        for(auto a : tracker) {
+            if(x==a) test=true;
+        }
+        if(!test) {
+            cout << "Error: nije unesen adekvatan broj.\n";
+        }
+    }
     // Vektor koji ce sadrzavati promijenjeni red
     vector<string> newData;
     // Broj reda
@@ -203,35 +272,61 @@ void cancel_exam(const vector<string>& data) {
     modifyRow(EXAMDATA, rowNumber, format_for_database(newData));
 }
 
+// Funkcija koja omogucava profesoru da ocjeni ispit
 void mark_exam(const vector<string>& data) {
     cout << "Ocjenjivanje ispita\n";
+    line();
+    // Koristimo vektor za pracenje odabira
+    vector<int> tracker;
+    int count1 = 0;
     // Smjestamo vrijednost svih ispita u vektor exams
     vector<vector<string>> exams = load_exams();
     // Za svaki unos u exams provjeravamo da li id profesora u data odgovra idu
     // profesora u exams, te da li je to zadnji ispit sa tim indeksom
+
     for (int i = 0; i < exams.size(); i++) {
     if ((i==0||exams[i-1][EXAM_INDEX_INDEX]!=exams[i][EXAM_INDEX_INDEX]) && exams[i][EXAM_PROFESSOR_INDEX_INDEX] == data[PERSON_INDEX_NUMBER]) {
         cout << exams[i][EXAM_SUBJECT_INDEX] << " - " << exams[i][EXAM_DATE_INDEX]
         << " - " << exams[i][EXAM_INDEX_INDEX] << "\n";
+        tracker.push_back(stoi(exams[i][EXAM_INDEX_INDEX]));
+        count1++;
         }
     }
+    if(count1==0) {
+        cout << "Nema evidentiranih ispita\n";
+        return;
+    }
+    cout << "ODUSTANI - 0\n";
     // Pomocna varijabla
     int x;
-    number_cin(x, "Vas odabir: ");
+    bool test = false;
+    while(!test) {
+        number_cin(x, "Vas odabir: ");
+        if(x==0) return;
+        for(auto a : tracker) {
+            if(x==a) test=true;
+        }
+        if(!test) {
+            cout << "Error: nije unesen adekvatan broj.\n";
+        }
+    }
     // Ocjenjujemo svakog studenta u izabranom ispitu, brojimo redove pomocu varijable count
     int count = 0;
     // Bool varijabla za ispis prdmeta ispita i datuma
     bool written = false;
+    tracker.clear();
+    int count2 = 0;
     for(auto a : exams) {
         count++;
         // Provjera da li je to stavka izabranog ispita
         if(a[EXAM_INDEX_INDEX]==to_string(x)) {
             if(written==false) {
+                line();
                 // Ispis predmeta i datuma ispita
                 cout << a[EXAM_SUBJECT_INDEX] << " - " << a[EXAM_PROFESSOR_INDEX] 
                 << " " << a[EXAM_PROFESSOR_SURNAME] 
                 << " - " << a[EXAM_DATE_INDEX] << "\n";
-                line();
+
                 written=true;
             }
             // Provjera da li je ispit prijavljen i da li je vec ocjenjen
@@ -247,26 +342,54 @@ void mark_exam(const vector<string>& data) {
                 newData[EXAM_GRADE_INDEX] = to_string(ocjena);
                 // Konacno upisujemo red
                 modifyRow(EXAMDATA, count, format_for_database(newData));
+                count2++;
             }
         }
     }
+    if(count2==0) {
+        cout << "Niko nije pristupio ispitu\n";
+        return;
+    }
 }
 
+// Funkcija koja omogucuje profesoru da izbrise podatke o ispitu
 void delete_exam(const vector<string>& data) {
     cout << "Brisanje ispita\n";
+    line();
+    // Koristimo vektor za pracenje odabira
+    vector<int> tracker;
     // Smjestamo vrijednost svih ispita u vektor exams
     vector<vector<string>> exams = load_exams();
     // Za svaki unos u exams provjeravamo da li id profesora u data odgovra idu
     // profesora u exams, te da li je to zadnji ispit sa tim indeksom
+    int count = 0;
     for (int i = 0; i < exams.size(); i++) {
     if ((i==0||exams[i-1][EXAM_INDEX_INDEX]!=exams[i][EXAM_INDEX_INDEX]) && exams[i][EXAM_PROFESSOR_INDEX_INDEX] == data[PERSON_INDEX_NUMBER]) {
         cout << exams[i][EXAM_SUBJECT_INDEX] << " - " << exams[i][EXAM_DATE_INDEX]
         << " - " << exams[i][EXAM_INDEX_INDEX] << "\n";
+        tracker.push_back(stoi(exams[i][EXAM_INDEX_INDEX]));
+        count++;
         }
     }
+    if(count==0) {
+        cout << "Nema evidentiranih ispita\n";
+        return;
+    }
+    cout << "ODUSTANI - 0\n";
+    line();
     // Pomocna varijabla
+    bool test = false;
     int x;
-    number_cin(x, "Vas odabir: ");
+    while(!test) {
+        number_cin(x, "Vas odabir: ");
+        if(x==0) return;
+        for(auto a : tracker) {
+            if(x==a) test=true;
+        }
+        if(!test) {
+            cout << "Error: nije unesen adekvatan broj.\n";
+        }
+    }
     // Otvaramo fajl brisuci sve iz njega
     ofstream out(EXAMDATA);
     if(out.fail()) {
@@ -279,4 +402,30 @@ void delete_exam(const vector<string>& data) {
             out << help << "\n";
         }
     }
+}
+
+// Funkcija koja omogucava studentu da vidi polozene ispite, ocjenu i prosjek ocjena
+void show_passed_exams(const vector<string>& data) {
+    cout << "Polozeni ispiti\n";
+    line();
+    // Smjestamo vrijednost svih ispita u vektor exams
+    vector<vector<string>> exams = load_exams();
+    // Pomocne varijable za prosjek
+    int count = 0;
+    float sum = 0;
+    // Za svaki unos u exams provjeravamo da li id studenta u data odgovra idu
+    // studenta u exams, ako odgovara ispisujemo predmet, ime i prezime profesora,
+    // ocjenu, a nakon toga prosjek
+    for (int i = 0; i < exams.size(); i++) {
+        if (exams[i][EXAM_STUDENT_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]&&stoi(exams[i][EXAM_GRADE_INDEX])>=6) {
+            cout << exams[i][EXAM_SUBJECT_INDEX] << " - " << exams[i][EXAM_DATE_INDEX] << " - "
+            << exams[i][EXAM_PROFESSOR_INDEX] << " "
+            << exams[i][EXAM_PROFESSOR_SURNAME] << " - " << exams[i][EXAM_GRADE_INDEX] << "\n";
+            count++;
+            sum+=stoi(exams[i][EXAM_GRADE_INDEX]);
+        }
+    }
+    if(count==0) {cout << "Neme polozenih ispita\n";return;}
+    line();
+    cout << fixed << setprecision(2) << "PROSJEK: " << sum/count << "\n";
 }

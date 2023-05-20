@@ -11,7 +11,7 @@
 using namespace std;
 
 int main() {
-
+    cls();
     LOGIN:
     // Varijabla u kojoj cemo pohraniti podatke o logovanoj osobi
     vector<string> loginData;
@@ -21,6 +21,7 @@ int main() {
     do {
         show_login();
         loginData = try_login();
+        if(loginData[0]=="IZLAZ") goto END;
         if(loginData.empty()) {
             cout << "Neispravan email ili password\n";
             cls();
@@ -50,20 +51,30 @@ int main() {
                 exam_choice = exam_menu_professor();
                 // Opcija 1 - pokretanje ispita
                 if(exam_choice==1) {
+                    cls();
                     start_exam(loginData);
                 } else if(exam_choice==2) {
+                    cls();
                     mark_exam(loginData);
-                } else {
+                } else if(exam_choice==3) {
+                    cls();
                     delete_exam(loginData);
                 }
-            } else {
+            } else if(loginData[PERSON_TYPE_INDEX]==STUDENT_TYPE) {
                 exam_choice = exam_menu_student();
                 // Opcija 1 - prijava ispita
                 if(exam_choice==1) {
+                    cls();
                     confirm_exam(loginData);
-                } else {
+                } else if(exam_choice==2) {
+                    cls();
                     cancel_exam(loginData);
+                } else if(exam_choice==3) {
+                    cls();
+                    show_passed_exams(loginData);
                 }
+            } else {
+                cout << "Stranicu ispiti administriraju iskljucivo profesori\n";
             }
             break;
         case 5:

@@ -390,7 +390,7 @@ void limited_number_cin(T& x, const string& message, int lowerLimit, int upperLi
     do {
         number_cin(x, message);
         if(x < lowerLimit || x > upperLimit) {
-            cout << "Error: broj nije unesen u adekvatnim granicama.\n";
+            cout << "Error: nije unesen adekvatan broj.\n";
         }
     } while(x < lowerLimit || x > upperLimit);
 }

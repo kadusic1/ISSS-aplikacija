@@ -8,4 +8,3 @@ Nevzudin+Buzadjija+6+m+1+0+0+nevzudin.buzadjija@size.ba+12345678+
 Alen+Begovic+7+m+1+0+0+alen.begovic@size.ba+test1234+
 Afan+Ceco+8+m+1+0+0+afan.ceco@size.ba+afanceco+
 Test+Test+9+m+2+Softversko inzenjerstvo+II+test@size.ba+test+
-Nejra+Smajlovic+10+z+2+Softversko inzenjerstvo+II+nejra.smajlovic.22@size.ba+nejra123+

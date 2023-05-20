@@ -1,2 +1,2 @@
-Stranica login
+Stranica login (za izlazak dva puta pritisnite enter)
 -----------------------------------------------------

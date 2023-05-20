@@ -3,4 +3,6 @@ Stranica ispiti
 Izbor funkcije:
     1 - Prijavi ispit
     2 - Odjavi ispit
+    3 - Polozeni ispiti
+    0 - ODUSTANI
 ------------------------------------------------------

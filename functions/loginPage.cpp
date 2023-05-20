@@ -41,6 +41,10 @@ vector<string> try_login() {
     getline(cin, password);
     // Vektor koji će sadržavati sve unose jednog reda (vrijednosti kolona)
     vector<string> helper;
+    if(email==""&&password=="") {
+        helper.push_back("IZLAZ");
+        return helper;
+    }
     // Inicijaliziramo varijablu lineCount u koju poharnjujemo broj redova u dokumentu
     // osobe.txt
     ifstream input(PERSONDATA);

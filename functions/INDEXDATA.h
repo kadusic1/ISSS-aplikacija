@@ -5,6 +5,7 @@
 #include <string>
 using namespace std;
 
+
 // String varijable
 // Varijabla lokacije direktorija sa text file-ovima
 const string TEXTFILESPATH = "functions/textfiles/";
