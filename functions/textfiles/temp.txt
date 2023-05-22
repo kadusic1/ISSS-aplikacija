@@ -1,3 +1,9 @@
-Softversko inzenjerstvo+3+1+
-Proizvodni biznis+3+2+
-Gradjevinarstvo+3+3+
+root+root+0+0+0+0+0+root+superuserdo+
+Adi+Kadusic+1+m+2+Softversko inzenjerstvo+II+adi.kadusic.22@size.ba+testtest+
+Kemal+Muminovic+2+m+2+Softversko inzenjerstvo+II+kemal.muminovic.22@size.ba+test123+
+Adis+Masic+3+m+2+Softversko inzenjerstvo+II+adis.masic.22@size.ba+1234+
+Niko+Neznanovic+4+m+2+Softversko inzenjerstvo+II+niko.neznanovic.22@size.ba+tesst+
+Tarik+Glamocak+5+m+2+Softversko inzenjerstvo+II+tarik.glamocak.22@size.ba+tarik123+
+Nevzudin+Buzadjija+6+m+1+0+0+nevzudin.buzadjija@size.ba+12345678+
+Alen+Begovic+7+m+1+0+0+alen.begovic@size.ba+test1234+
+Afan+Ceco+8+m+1+0+0+afan.ceco@size.ba+afanceco+

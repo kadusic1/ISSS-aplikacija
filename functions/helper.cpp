@@ -297,10 +297,11 @@ int show_index(const string& NAME, int column_count, int name_index, int foreign
             help[foreign_index2] << " - " << count++ << "\n";
         }
     }
+    cout << "ODUSTANI - 0\n";
     // Deklaracija varijable koju cemo vratiti
     int x;
     // Sigurni unos broja
-    number_cin(x, "Vas odabir: ");
+    limited_number_cin(x, "Vas odabir: ", 0, count-1);
     return x;
 }
 
