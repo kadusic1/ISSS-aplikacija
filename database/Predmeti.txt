@@ -1,0 +1,15 @@
+Diskretna matematika+II+Softversko inzenjerstvo+Hermina+27+1+
+Napredne tehnike programiranja+II+Softversko inzenjerstvo+Nevzudin+24+2+
+Racunarske mreze+II+Softversko inzenjerstvo+Esad+26+3+
+Engleski jezik+II+Softversko inzenjerstvo+Alen+25+4+
+Operativni sistemi+II+Softversko inzenjerstvo+Nevzudin+24+5+
+Gradjevinska fizika+V+Gradjevinarstvo+Nevzudin+24+7+
+Inzenjerka matematika+V+Gradjevinarstvo+Hermina+27+8+
+Mehanika+V+Gradjevinarstvo+Esad+26+9+
+Geologija+V+Gradjevinarstvo+Alen+25+10+
+Engleski jezik+V+Gradjevinarstvo+Alen+25+11+
+Masinstvo+III+Proizvodni biznis+Nevzudin+24+12+
+Matematika+III+Proizvodni biznis+Hermina+27+13+
+Ekonomika+III+Proizvodni biznis+Esad+26+14+
+Sociologija+III+Proizvodni biznis+Alen+25+15+
+Sportska kultura+III+Proizvodni biznis+Nevzudin+24+16+

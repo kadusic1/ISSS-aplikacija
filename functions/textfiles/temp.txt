@@ -1,26 +1,13 @@
-root+root+0+0+0+0+0+root+superuserdo+
-Kemal+Muminovic+1+m+2+Softversko inzenjerstvo+II+kemalmuminovic@size.ba+kemal12345+
-Adis+Masic+2+m+2+Softversko inzenjerstvo+II+adismasic@size.ba+adisadis+
-Adi+Kadusic+3+m+2+Softversko inzenjerstvo+II+adikadusic@size.ba+adiadi+
-Tarik+Glamocak+4+m+2+Softversko inzenjerstvo+II+tarikglamocak@size.ba+tariktarik+
-Faris+Hrustic+5+m+2+Softversko inzenjerstvo+II+farishrustic@size.ba+hrusta+
-Adna+Imamovic+6+z+2+Softversko inzenjerstvo+II+adnaimamovic@size.ba+adna+
-Jasmina+Barucija+7+z+2+Softversko inzenjerstvo+II+jasminabarucija@size.ba+jasmina+
-Amina+Zvekic+8+z+2+Softversko inzenjerstvo+II+aminazvekic@size.ba+amina+
-Ensar+Krehmic+9+m+2+Gradjevinarstvo+V+ensarkrehmic@grze.ba+ensar+
-Bahrudin+Patkovic+10+m+2+Gradjevinarstvo+V+bahrudinpatkovic@grze.ba+bahro+
-Imran+Alagic+11+m+2+Gradjevinarstvo+V+imranalagic@grze.ba+alagic+
-Ilda+Sehic+12+z+2+Gradjevinarstvo+V+ildasehic@grze.ba+ilda+
-Maida+Ekremovic+13+z+2+Gradjevinarstvo+V+maidaekremovic@grze.ba+maida+
-Lejla+Bajramovic+14+z+2+Gradjevinarstvo+V+lejlabajramovic@grze.ba+lejla+
-Lamija+Porca+15+z+2+Gradjevinarstvo+V+lamijaporca@grze.ba+lamija+
-Hamza+Kahric+16+m+2+Proizvodni biznis+III+hamzakahric@pbze.ba+hamza+
-Zulfo+Madesko+17+m+2+Proizvodni biznis+III+zulfomadesko@pbze.ba+rusija+
-Kenan+Dedic+18+m+2+Proizvodni biznis+III+kenandedic@pbze.ba+keno+
-Nedim+Basic+19+m+2+Proizvodni biznis+III+nedimbasic@pbze.ba+neda+
-Ajla+Skopljak+20+z+2+Proizvodni biznis+III+ajlaskipljak@pbze.ba+ajla+
-Tajra+Fetic+21+z+2+Proizvodni biznis+III+tajrafetic@pbze.ba+tajra+
-Medina+Osmancevic+22+z+2+Proizvodni biznis+III+medinaosmancevic@pbze.ba+medina+
-Nejra+Mujezinovic+23+z+2+Proizvodni biznis+III+nejramujezinovic@pbze.ba+nejra+
-Nevzudin+Buzadija+24+m+1+0+0+nevzudinbuzadija@unze.ba+nevzudin+
-Alen+Begovic+25+m+1+0+0+alenbegovic@unze.ba+bega+
+Diskretna matematika+II+Softversko inzenjerstvo+Hermina+27+1+
+Napredne tehnike programiranja+II+Softversko inzenjerstvo+Nevzudin+24+2+
+Racunarske mreze+II+Softversko inzenjerstvo+Esad+26+3+
+Engleski jezik+II+Softversko inzenjerstvo+Alen+25+4+
+Operativni sistemi+II+Softversko inzenjerstvo+Nevzudin+24+5+
+Gradjevinska fizika+V+Gradjevinarstvo+Nevzudin+24+7+
+Inzenjerka matematika+V+Gradjevinarstvo+Hermina+27+8+
+Mehanika+V+Gradjevinarstvo+Esad+26+9+
+Geologija+V+Gradjevinarstvo+Alen+25+10+
+Engleski jezik+V+Gradjevinarstvo+Alen+25+11+
+Masinstvo+III+Proizvodni biznis+Nevzudin+24+12+
+Matematika+III+Proizvodni biznis+Hermina+27+13+
+Ekonomika+III+Proizvodni biznis+Esad+26+14+

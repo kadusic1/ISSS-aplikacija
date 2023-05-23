@@ -10,4 +10,5 @@ Izbor funkcije:
     7 - Ukloni predmet
     8 - Dodaj osobu
     9 - Ukloni osobu
+    0 - ODUSTANI
 ------------------------------------------------------

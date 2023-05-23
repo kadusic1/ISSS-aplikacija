@@ -215,7 +215,7 @@ void add_subject() {
 // Funkcija koja uklanja predmet iz tabele baze podataka
 void remove_subject() {
     int predmet_za_ukloniti = show_index(SUBJECTDATA, SUBJECT_COLUMNS, 
-    SUBJECT_NAME_INDEX, SUBJECT_FOREIGN_INDEX, 0);
+    SUBJECT_NAME_INDEX, SUBJECT_FOREIGN_INDEX, SUBJECT_DEPARTMENT_INDEX);
     deleteRow(SUBJECTDATA, predmet_za_ukloniti);
 }
 
