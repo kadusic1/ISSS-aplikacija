@@ -430,3 +430,39 @@ void show_passed_exams(const vector<string>& data) {
     line();
     cout << fixed << setprecision(2) << "PROSJEK: " << sum/count << "\n";
 }
+
+// Fukcija koja postavlja oglaas
+void add_announcement(const vector<string>& data) {
+    string help;
+    ofstream out(ANNOUNCEMENTDATA, ios::app);
+    if(out.fail()) {
+        error();
+        return;
+    }
+    cls();
+    if(data[PERSON_NAME_INDEX]=="root") {
+        out << "Administrator - ";
+    } else {
+        out << data[PERSON_NAME_INDEX] << " " << data[PERSON_SURNAME_INDEX] << " - ";
+    }
+    cout << "Postavljanje obavijesti (Za odustajanje unesi X u prvom unosu)\n";
+    cout << "Unesi datum postavljanja: ";
+    notemptycin(help);
+    out << help << " - ";
+    cout << "Unesite ime obavijesti: ";
+    notemptycin(help);
+    out << help << "\n";
+    line();
+    help.clear();
+    cout << "Unosenje teksta:\n\n";
+    out << "------------------------------------------------------\n";
+    do {
+        getline(cin, help);
+        if(!help.empty()) {
+            out << help << "\n";
+        }
+    } while(!help.empty());
+    out << "------------------------------------------------------\n";
+    out << "\n";
+    out.close();
+}

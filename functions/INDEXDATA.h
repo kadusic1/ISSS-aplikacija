@@ -24,6 +24,8 @@ const string SUBJECTDATA = "database/Predmeti.txt"; // Lokacija tabele sa inform
 // o predmetima
 const string EXAMDATA = "database/Ispiti.txt"; // Lokacija tabele sa informacijama
 // o ispitima
+const string ANNOUNCEMENTDATA = "functions/textfiles/announcements.txt"; // Lokacija
+// text fajla sa obavijestima
 
 // Varijable koje opisiju tabelu Osobe.txt
 const int PERSON_NAME_INDEX = 0;

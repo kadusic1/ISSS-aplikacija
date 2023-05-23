@@ -1,0 +1,7 @@
+Oglasna ploca - odabir opcija
+------------------------------------------------------
+Izbor opcije:
+    1 - Procitaj oglase
+    2 - Postavi oglas
+    0 - ODUSTANI
+------------------------------------------------------

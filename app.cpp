@@ -40,6 +40,19 @@ int main() {
             // Ispisujemo informacije o korisniku
             my_info(loginData);
         case 2:
+            int choice;
+            if(loginData[PERSON_TYPE_INDEX]!=STUDENT_TYPE) {
+                choice = announcement_menu();
+                if(choice==2) {
+                    add_announcement(loginData);
+                } else if(choice==1) {
+                    cls();
+                    show(ANNOUNCEMENTDATA);
+                }
+            } else {
+                cls();
+                show(ANNOUNCEMENTDATA);
+            }
             break;
         case 3:
             int exam_choice;

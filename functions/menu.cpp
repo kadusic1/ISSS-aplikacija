@@ -14,6 +14,7 @@ const string ROOTMENUFILE = "functions/textfiles/showrootmenu.txt";
 const string EXAMMENUFILEPROFESSOR = "functions/textfiles/showexammenuprofessor.txt";
 const string EXAMMENUFILESTUDENT = "functions/textfiles/showexammenustudent.txt";
 const string EXAMMENUFILEROOT = "functions/textfiles/showexammenuroot.txt";
+const string ANNOUNCEMENTMENU = "functions/textfiles/showannouncements.txt";
 
 // Funkcija za ispis osnovnih podataka o ulogovanom korisniku, a zatim ispis menija
 // i izbor opcija
@@ -124,3 +125,23 @@ int exam_menu_student() {
 //         if(unos != 0 && unos != 1) cout << "[GRESKA] Neispravan unos\n";
 //     } while(unos != 0 && unos != 1);
 // }
+
+// Funkcija za menu stranice ispiti - student
+int announcement_menu() {
+    // Brisemo ekran
+    cls();
+     // Ispisi datoteku showexammenustudent.txt
+    show(ANNOUNCEMENTMENU);
+    // Gornja granica je 2 jer imamo 2 opcije
+    int upperLimit = 2;
+    // Variabjla u koju smjestamo izbor
+    int unos;
+    // Unosimo sve dok ne unesemo vrijednost od 1 do 5
+    do {
+        // Sigurni unos broja pomocu funkcije number_cin()
+        number_cin(unos, "Vas unos: ");
+        if(unos < 0 || unos > upperLimit) cout << "[GRESKA] Neispravan unos\n";
+    } while(unos < 0 || unos > upperLimit);
+    // Vracamo odabranu vrijednost
+    return unos;
+}
