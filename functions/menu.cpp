@@ -48,7 +48,7 @@ int menu(const vector<string>& rowData) {
     do {
         // Sigurni unos broja pomocu funkcije number_cin()
         number_cin(unos, "Vas unos: ");
-        if(unos < 1 || unos > upperLimit) cout << "[GREKSA] Neispravan unos\n";
+        if(unos < 1 || unos > upperLimit) cout << "[GRESKA] Neispravan unos\n";
     } while(unos < 1 || unos > upperLimit);
     // Vracamo odabranu vrijednost
     return unos;

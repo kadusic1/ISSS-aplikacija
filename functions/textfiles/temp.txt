@@ -1,20 +1,26 @@
-I+Softversko inzenjerstvo+1+
-II+Softversko inzenjerstvo+2+
-III+Softversko inzenjerstvo+3+
-IV+Softversko inzenjerstvo+4+
-V+Softversko inzenjerstvo+5+
-VI+Softversko inzenjerstvo+6+
-I+Gradjevinarstvo+7+
-II+Gradjevinarstvo+8+
-III+Gradjevinarstvo+9+
-IV+Gradjevinarstvo+10+
-V+Gradjevinarstvo+11+
-VI+Gradjevinarstvo+12+
-I+Proizvodni biznis+13+
-II+Proizvodni biznis+14+
-III+Proizvodni biznis+15+
-IV+Proizvodni biznis+16+
-V+Proizvodni biznis+17+
-VI+Proizvodni biznis+18+
-VII+Proizvodni biznis+20+
-VIII+Proizvodni biznis+21+
+root+root+0+0+0+0+0+root+superuserdo+
+Kemal+Muminovic+1+m+2+Softversko inzenjerstvo+II+kemalmuminovic@size.ba+kemal12345+
+Adis+Masic+2+m+2+Softversko inzenjerstvo+II+adismasic@size.ba+adisadis+
+Adi+Kadusic+3+m+2+Softversko inzenjerstvo+II+adikadusic@size.ba+adiadi+
+Tarik+Glamocak+4+m+2+Softversko inzenjerstvo+II+tarikglamocak@size.ba+tariktarik+
+Faris+Hrustic+5+m+2+Softversko inzenjerstvo+II+farishrustic@size.ba+hrusta+
+Adna+Imamovic+6+z+2+Softversko inzenjerstvo+II+adnaimamovic@size.ba+adna+
+Jasmina+Barucija+7+z+2+Softversko inzenjerstvo+II+jasminabarucija@size.ba+jasmina+
+Amina+Zvekic+8+z+2+Softversko inzenjerstvo+II+aminazvekic@size.ba+amina+
+Ensar+Krehmic+9+m+2+Gradjevinarstvo+V+ensarkrehmic@grze.ba+ensar+
+Bahrudin+Patkovic+10+m+2+Gradjevinarstvo+V+bahrudinpatkovic@grze.ba+bahro+
+Imran+Alagic+11+m+2+Gradjevinarstvo+V+imranalagic@grze.ba+alagic+
+Ilda+Sehic+12+z+2+Gradjevinarstvo+V+ildasehic@grze.ba+ilda+
+Maida+Ekremovic+13+z+2+Gradjevinarstvo+V+maidaekremovic@grze.ba+maida+
+Lejla+Bajramovic+14+z+2+Gradjevinarstvo+V+lejlabajramovic@grze.ba+lejla+
+Lamija+Porca+15+z+2+Gradjevinarstvo+V+lamijaporca@grze.ba+lamija+
+Hamza+Kahric+16+m+2+Proizvodni biznis+III+hamzakahric@pbze.ba+hamza+
+Zulfo+Madesko+17+m+2+Proizvodni biznis+III+zulfomadesko@pbze.ba+rusija+
+Kenan+Dedic+18+m+2+Proizvodni biznis+III+kenandedic@pbze.ba+keno+
+Nedim+Basic+19+m+2+Proizvodni biznis+III+nedimbasic@pbze.ba+neda+
+Ajla+Skopljak+20+z+2+Proizvodni biznis+III+ajlaskipljak@pbze.ba+ajla+
+Tajra+Fetic+21+z+2+Proizvodni biznis+III+tajrafetic@pbze.ba+tajra+
+Medina+Osmancevic+22+z+2+Proizvodni biznis+III+medinaosmancevic@pbze.ba+medina+
+Nejra+Mujezinovic+23+z+2+Proizvodni biznis+III+nejramujezinovic@pbze.ba+nejra+
+Nevzudin+Buzadija+24+m+1+0+0+nevzudinbuzadija@unze.ba+nevzudin+
+Alen+Begovic+25+m+1+0+0+alenbegovic@unze.ba+bega+
