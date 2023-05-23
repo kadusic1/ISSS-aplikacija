@@ -466,3 +466,49 @@ void add_announcement(const vector<string>& data) {
     out << "\n";
     out.close();
 }
+
+// Funkcija koja mijenja password korisnika
+void change_password(const vector<string>& data) {
+    string help;
+    int rowNumber = 0;
+    ifstream in(PERSONDATA);
+    if(in.fail()) {
+        error();
+        return;
+    }
+    vector<string> row;
+    while(true) {
+        rowNumber++;
+        row = load_row(in, PERSON_COLUMNS);
+        if(row[PERSON_INDEX_NUMBER]==data[PERSON_INDEX_NUMBER]) {
+            break;
+        }
+    }
+    if(rowNumber==line_count(in)) {
+        cout << "Trazena osoba ne postoji\n";
+        in.close();
+        return;
+    }
+    in.close();
+    row.clear();
+    row = load_nth_row(PERSONDATA, rowNumber, PERSON_COLUMNS);
+    cls();
+    cout << "Promjena passworda (Za odustajanje unesi X u prvom unosu)\n";
+    line();
+    cout << "Korisnik: " << row[PERSON_NAME_INDEX] << " " <<
+    row[PERSON_SURNAME_INDEX] << "\n";
+    help.clear();
+    cout << "Unesite stari password: ";
+    notemptycin(help);   
+    if(help.empty()) return;
+    if(help!=row[PERSON_PASSWORD_INDEX]) {
+        cout << "Neispravan password\n";
+        return;
+    }
+    cout << "Unesite novi password: ";
+    notemptycin(help);   
+    if(help.empty()) return;
+    row[PERSON_PASSWORD_INDEX] = help;
+    modifyRow(PERSONDATA, rowNumber, format_for_database(row));
+    cout << "Password uspjesno promijenjen\n";
+}

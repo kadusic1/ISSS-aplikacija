@@ -89,6 +89,7 @@ int main() {
             }
             break;
         case 4:
+            change_password(loginData);
             break;
         case 5:
             cout << "Odlogovali ste se iz accounta\n";

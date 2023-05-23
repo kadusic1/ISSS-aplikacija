@@ -4,6 +4,6 @@ Izbor stranice:
     1 - Moje informacije
     2 - Oglasna ploca
     3 - Ispiti
-    4 - Licno
+    4 - Promjena passworda
     5 - Log off
     6 - Zavrsi program

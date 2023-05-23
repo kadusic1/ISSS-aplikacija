@@ -1,6 +1,6 @@
 root+root+0+0+0+0+0+root+superuserdo+
 Kemal+Muminovic+1+m+2+Softversko inzenjerstvo+II+kemalmuminovic@size.ba+kemal12345+
-Adis+Masic+2+m+2+Softversko inzenjerstvo+II+adismasic@size.ba+adisadis+
+Adis+Masic+2+m+2+Softversko inzenjerstvo+II+adismasic@size.ba+adis12345+
 Adi+Kadusic+3+m+2+Softversko inzenjerstvo+II+adikadusic@size.ba+adiadi+
 Tarik+Glamocak+4+m+2+Softversko inzenjerstvo+II+tarikglamocak@size.ba+tariktarik+
 Faris+Hrustic+5+m+2+Softversko inzenjerstvo+II+farishrustic@size.ba+hrusta+
