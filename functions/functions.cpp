@@ -58,7 +58,8 @@ void start_exam(const vector<string>& data) {
         count++;
         // Ukoliko predmet pripada trazenom profesoru nudimo za pokretanje ispita
         if(a[SUBJECT_PROFESSOR_INDEX_INDEX]==data[PERSON_INDEX_NUMBER]) {
-            cout << a[SUBJECT_NAME_INDEX] << " - " << count << "\n";
+            cout << a[SUBJECT_NAME_INDEX] << " - " << a[SUBJECT_DEPARTMENT_INDEX] <<
+            " - " << a[SUBJECT_FOREIGN_INDEX] << " - " << count << "\n";
             tracker.push_back(count);
             count2++;
         }
