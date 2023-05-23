@@ -1,16 +1,16 @@
-Nevzudin+Buzadija+24+Kemal+Muminovic+1+Napredne tehnike programiranja+2+10.06.2023.+0+1+1+
-Nevzudin+Buzadija+24+Adis+Masic+2+Napredne tehnike programiranja+2+10.06.2023.+0+1+1+
-Nevzudin+Buzadija+24+Adi+Kadusic+3+Napredne tehnike programiranja+2+10.06.2023.+0+1+1+
+Nevzudin+Buzadija+24+Kemal+Muminovic+1+Napredne tehnike programiranja+2+10.06.2023.+10+1+1+
+Nevzudin+Buzadija+24+Adis+Masic+2+Napredne tehnike programiranja+2+10.06.2023.+5+1+1+
+Nevzudin+Buzadija+24+Adi+Kadusic+3+Napredne tehnike programiranja+2+10.06.2023.+10+1+1+
 Nevzudin+Buzadija+24+Tarik+Glamocak+4+Napredne tehnike programiranja+2+10.06.2023.+0+0+1+
-Nevzudin+Buzadija+24+Faris+Hrustic+5+Napredne tehnike programiranja+2+10.06.2023.+0+1+1+
-Nevzudin+Buzadija+24+Adna+Imamovic+6+Napredne tehnike programiranja+2+10.06.2023.+0+1+1+
+Nevzudin+Buzadija+24+Faris+Hrustic+5+Napredne tehnike programiranja+2+10.06.2023.+8+1+1+
+Nevzudin+Buzadija+24+Adna+Imamovic+6+Napredne tehnike programiranja+2+10.06.2023.+5+1+1+
 Nevzudin+Buzadija+24+Jasmina+Barucija+7+Napredne tehnike programiranja+2+10.06.2023.+0+0+1+
-Nevzudin+Buzadija+24+Amina+Zvekic+8+Napredne tehnike programiranja+2+10.06.2023.+0+1+1+
+Nevzudin+Buzadija+24+Amina+Zvekic+8+Napredne tehnike programiranja+2+10.06.2023.+6+1+1+
 Alen+Begovic+25+Ensar+Krehmic+9+Engleski jezik+11+17.06.2023.+0+0+2+
-Alen+Begovic+25+Bahrudin+Patkovic+10+Engleski jezik+11+17.06.2023.+0+1+2+
-Alen+Begovic+25+Imran+Alagic+11+Engleski jezik+11+17.06.2023.+0+1+2+
-Alen+Begovic+25+Ilda+Sehic+12+Engleski jezik+11+17.06.2023.+0+1+2+
-Alen+Begovic+25+Maida+Ekremovic+13+Engleski jezik+11+17.06.2023.+0+1+2+
+Alen+Begovic+25+Bahrudin+Patkovic+10+Engleski jezik+11+17.06.2023.+10+1+2+
+Alen+Begovic+25+Imran+Alagic+11+Engleski jezik+11+17.06.2023.+8+1+2+
+Alen+Begovic+25+Ilda+Sehic+12+Engleski jezik+11+17.06.2023.+8+1+2+
+Alen+Begovic+25+Maida+Ekremovic+13+Engleski jezik+11+17.06.2023.+9+1+2+
 Alen+Begovic+25+Lejla+Bajramovic+14+Engleski jezik+11+17.06.2023.+0+0+2+
 Alen+Begovic+25+Lamija+Porca+15+Engleski jezik+11+17.06.2023.+0+0+2+
 Esad+Kadusic+26+Kemal+Muminovic+1+Racunarske mreze+3+20.06.2023.+0+1+3+
