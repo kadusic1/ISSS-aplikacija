@@ -1,6 +1,0 @@
-Nevzudin+Buzadjija+6+Adi+Kadusic+1+Algoritmi i strukture podataka+7+25.06.2023.+10+1+1+
-Nevzudin+Buzadjija+6+Kemal+Muminovic+2+Algoritmi i strukture podataka+7+25.06.2023.+9+1+1+
-Nevzudin+Buzadjija+6+Adis+Masic+3+Algoritmi i strukture podataka+7+25.06.2023.+9+1+1+
-Nevzudin+Buzadjija+6+Niko+Neznanovic+4+Algoritmi i strukture podataka+7+25.06.2023.+7+1+1+
-Nevzudin+Buzadjija+6+Tarik+Glamocak+5+Algoritmi i strukture podataka+7+25.06.2023.+10+1+1+
-Nevzudin+Buzadjija+6+Test+Test+9+Algoritmi i strukture podataka+7+25.06.2023.+6+1+1+

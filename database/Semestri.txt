@@ -1,9 +1,0 @@
-I+Softversko inzenjerstvo+1+
-II+Softversko inzenjerstvo+2+
-III+Softversko inzenjerstvo+3+
-I+Proizvodni biznis+4+
-II+Proizvodni biznis+5+
-III+Proizvodni biznis+6+
-I+Gradjevinarstvo+7+
-II+Gradjevinarstvo+9+
-III+Gradjevinarstvo+10+

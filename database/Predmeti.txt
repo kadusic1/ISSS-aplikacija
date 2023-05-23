@@ -1,8 +1,0 @@
-Osnove elektrotehnike+II+Softversko inzenjerstvo+Alen+7+1+
-Elektronika+II+Softversko inzenjerstvo+Alen+7+2+
-Racunarske mreze+II+Softversko inzenjerstvo+Afan+8+3+
-Napredne tehnike programiranja+II+Softversko inzenjerstvo+Nevzudin+6+4+
-Mehatronika+II+Softversko inzenjerstvo+Alen+7+5+
-Objektno orijentisano programiranje+II+Softversko inzenjerstvo+Nevzudin+6+6+
-Algoritmi i strukture podataka+II+Softversko inzenjerstvo+Nevzudin+6+7+
-Racunarske arhitekture+II+Softversko inzenjerstvo+Afan+8+8+
