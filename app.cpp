@@ -42,8 +42,6 @@ int main() {
         case 2:
             break;
         case 3:
-            break;
-        case 4:
             int exam_choice;
             // Stranica vezana za ispita
             // Ukoliko je rijec o profesoru dajemo mogucnost pokretanja i ocjene ispita
@@ -77,17 +75,17 @@ int main() {
                 cout << "Stranicu ispiti administriraju iskljucivo profesori\n";
             }
             break;
-        case 5:
+        case 4:
             break;
-        case 6:
+        case 5:
             cout << "Odlogovali ste se iz accounta\n";
             cls();
             goto LOGIN;
-        case 7:
+        case 6:
             // Napustamo petlju preko labeli i zavrsavamo program
             goto END;
             break;
-        case 8:
+        case 7:
             // Odabir koju funkciju zelimo pozvati
             int functionChoice = root_menu();
             switch(functionChoice) {

@@ -36,10 +36,10 @@ int menu(const vector<string>& rowData) {
     show(MENUFILE);
     // Provjeravamo da li je korisnik root jer onda ima dodatne opcije, te inicijaliziramo
     // upperLimit varijablu radi provjere u do while pelji ako jest
-    int upperLimit = 7;
+    int upperLimit = 6;
     if(rowData[PERSON_TYPE_INDEX] == ROOT_TYPE) {
-        cout << "    8 - Root funkcije\n";
-        upperLimit = 8;
+        cout << "    7 - Root funkcije\n";
+        upperLimit = 7;
     }
     // Ispisujemo liniju i unos korisnika radi ljepseg formatiranja
     line();
@@ -61,7 +61,7 @@ int root_menu() {
     // Ispisi datoteku showrootfile.txt
     show(ROOTMENUFILE);
     // Gornja granica je 5 jer imamo pet opcija
-    int upperLimit = 9;
+    int upperLimit = 7;
     // Variabjla u koju smjestamo izbor
     int unos;
     // Unosimo sve dok ne unesemo vrijednost od 1 do 5
